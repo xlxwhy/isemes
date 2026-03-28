@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-background">
-        <img src="https://console.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=modern%20industrial%20technology%20building%20with%20glass%20facade%20and%20blue%20sky&image_size=landscape_16_9" alt="工业智能科技">
+        <img src="https://picsum.photos/id/180/1920/1080" alt="工业智能科技">
       </div>
       <div class="container">
         <div class="hero-content">
@@ -21,17 +21,17 @@
         <h2>产品优势</h2>
         <div class="advantages-grid">
           <div class="advantage-item">
-            <div class="advantage-icon">🤖</div>
+            <div class="advantage-icon ai-icon"></div>
             <h3>AI智能质检</h3>
             <p>7*24小时不间断疵点检测，实时停机告警，漏检率不超2%，过检率不超20%</p>
           </div>
           <div class="advantage-item">
-            <div class="advantage-icon">📊</div>
+            <div class="advantage-icon workflow-icon"></div>
             <h3>生产全流程管理</h3>
             <p>覆盖客户资料、原料进仓、生产订单、坯布进出仓的完整生产管理流程</p>
           </div>
           <div class="advantage-item">
-            <div class="advantage-icon">⚡</div>
+            <div class="advantage-icon monitor-icon"></div>
             <h3>实时数据监控</h3>
             <p>生产进度、库存状态、质量检测实时监控，云端日报随时查看</p>
           </div>
@@ -87,17 +87,17 @@
         <h2>为您带来的效益</h2>
         <div class="benefits-grid">
           <div class="benefit-item">
-            <div class="benefit-icon">📉</div>
+            <div class="benefit-icon waste-reduction-icon"></div>
             <h3>废布量极大减少</h3>
             <p>废布经济损失降低80%以上</p>
           </div>
           <div class="benefit-item">
-            <div class="benefit-icon">👨‍💼</div>
+            <div class="benefit-icon efficiency-icon"></div>
             <h3>工人效率提升</h3>
             <p>从看4台机到看6台机，工作积极性变高</p>
           </div>
           <div class="benefit-item">
-            <div class="benefit-icon">📈</div>
+            <div class="benefit-icon order-growth-icon"></div>
             <h3>订单量显著提升</h3>
             <p>布匹品质卓越，订单源源不断</p>
           </div>
@@ -293,15 +293,135 @@ export default {
   gap: 30px;
 }
 
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 60px 40px;
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--text-color);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 24px;
+  color: var(--primary-color);
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.hero-content .btn {
+  margin: 0 12px;
+}
+
+/* Product Advantages Section */
+.product-advantages {
+  background-color: var(--bg-secondary);
+}
+
+.advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+/* Product Features Section */
+.product-features {
+  background-color: var(--bg-primary);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+/* Technical Advantages Section */
+.technical-advantages {
+  background-color: var(--bg-secondary);
+}
+
+/* Customer Benefits Section */
+.customer-benefits {
+  background-color: var(--bg-primary);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+/* Reviews Section */
+.reviews {
+  background-color: var(--bg-secondary);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  color: white;
+}
+
+.cta h2::after {
+  background-color: var(--accent-color);
+}
+
 /* Item styles */
 .advantage-item, .feature-item, .benefit-item {
-  background-color: white;
-  padding: 40px 30px;
-  border-radius: 0;
-  box-shadow: none;
+  background-color: var(--bg-primary);
+  padding: 48px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   text-align: center;
-  transition: all 0.3s ease;
-  border: 1px solid #e9ecef;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
 }
@@ -311,16 +431,17 @@ export default {
   position: absolute;
   top: 0;
   left: 0;
-  width: 5px;
+  width: 6px;
   height: 100%;
-  background-color: #c8995d;
+  background-color: var(--accent-color);
   transform: scaleY(0);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 3px;
 }
 
 .advantage-item:hover, .feature-item:hover, .benefit-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .advantage-item:hover::before, .feature-item:hover::before, .benefit-item:hover::before {
@@ -328,69 +449,261 @@ export default {
 }
 
 .advantage-item h3, .feature-item h3, .benefit-item h3 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
-  color: #333;
-  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: var(--primary-color);
+  font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 .advantage-item p, .feature-item p, .benefit-item p {
-  color: #666;
+  color: var(--text-light);
   line-height: 1.8;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
 }
 
 /* Icon styles */
 .advantage-icon, .benefit-icon {
-  font-size: 3.5rem;
-  margin-bottom: 25px;
-  color: #c8995d;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 36px;
+  position: relative;
+  background-color: var(--accent-color);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(237, 137, 54, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.advantage-icon:hover, .benefit-icon:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(237, 137, 54, 0.3);
+}
+
+/* AI Icon */
+.ai-icon::before, .ai-icon::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.ai-icon::before {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  top: 20px;
+  left: 25px;
+}
+
+.ai-icon::after {
+  width: 40px;
+  height: 15px;
+  bottom: 20px;
+  left: 20px;
+  border-radius: 0 0 20px 20px;
+}
+
+/* Workflow Icon */
+.workflow-icon::before, .workflow-icon::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+}
+
+.workflow-icon::before {
+  width: 25px;
+  height: 15px;
+  border-radius: 4px;
+  top: 22px;
+  left: 17px;
+  box-shadow: 0 23px 0 white;
+}
+
+.workflow-icon::after {
+  width: 6px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid white;
+  border-left: none;
+  top: 25px;
+  right: 18px;
+  box-shadow: 0 23px 0 -2px white;
+}
+
+/* Monitor Icon */
+.monitor-icon::before, .monitor-icon::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+}
+
+.monitor-icon::before {
+  width: 40px;
+  height: 30px;
+  border-radius: 4px;
+  top: 15px;
+  left: 20px;
+}
+
+.monitor-icon::after {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  bottom: 18px;
+  left: 36px;
+}
+
+/* Waste Reduction Icon */
+.waste-reduction-icon::before, .waste-reduction-icon::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+}
+
+.waste-reduction-icon::before {
+  width: 30px;
+  height: 5px;
+  top: 25px;
+  left: 25px;
+  transform: rotate(-45deg);
+}
+
+.waste-reduction-icon::after {
+  width: 35px;
+  height: 20px;
+  border-radius: 20px 20px 0 0;
+  bottom: 20px;
+  left: 22px;
+}
+
+/* Efficiency Icon */
+.efficiency-icon::before, .efficiency-icon::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+}
+
+.efficiency-icon::before {
+  width: 12px;
+  height: 40px;
+  border-radius: 6px;
+  top: 20px;
+  left: 34px;
+}
+
+.efficiency-icon::after {
+  width: 25px;
+  height: 10px;
+  bottom: 30px;
+  left: 27px;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+}
+
+/* Order Growth Icon */
+.order-growth-icon::before, .order-growth-icon::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+}
+
+.order-growth-icon::before {
+  width: 35px;
+  height: 20px;
+  border-radius: 4px;
+  bottom: 20px;
+  left: 22px;
+}
+
+.order-growth-icon::after {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 20px 25px;
+  border-color: transparent transparent white transparent;
+  top: 25px;
+  right: 22px;
 }
 
 /* Reviews section */
 .review-item {
-  background-color: white;
-  padding: 35px;
-  border-radius: 0;
-  box-shadow: none;
-  border: 1px solid #e9ecef;
-  transition: all 0.3s ease;
+  background-color: var(--bg-primary);
+  padding: 48px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
 .review-item:hover {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transform: translateY(-3px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-8px);
 }
 
 .review-content {
-  margin-bottom: 25px;
+  margin-bottom: 32px;
 }
 
 .review-content p {
-  color: #666;
+  color: var(--text-light);
   line-height: 1.8;
   font-style: normal;
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   position: relative;
-  padding-left: 20px;
+  padding-left: 32px;
 }
 
 .review-content p::before {
   content: '"';
   position: absolute;
   left: 0;
-  top: -5px;
-  font-size: 2rem;
-  color: #c8995d;
+  top: -8px;
+  font-size: 2.5rem;
+  color: var(--accent-color);
   font-family: serif;
 }
 
 .review-author {
   text-align: right;
-  font-weight: 600;
-  color: #c8995d;
-  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.05rem;
   letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 40px 24px;
+    margin: 0 16px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .hero-content .btn {
+    margin: 8px 0;
+    display: block;
+  }
+  
+  .advantages-grid,
+  .features-grid,
+  .benefits-grid,
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .advantage-item, .feature-item, .benefit-item, .review-item {
+    padding: 32px 24px;
+  }
 }
 </style>

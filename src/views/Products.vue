@@ -44,7 +44,7 @@ export default {
             '本地部署，安装快捷',
             '云端数据报表和监控'
           ],
-          image: 'https://console.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=industrial%20quality%20inspection%20system%20with%20AI%20technology&image_size=landscape_16_9'
+          image: 'https://picsum.photos/id/188/1200/800'
         },
         {
           id: 2,
@@ -60,7 +60,7 @@ export default {
             '生产数据统计与报表',
             '灵活的权限管理系统'
           ],
-          image: 'https://console.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=textile%20production%20management%20system%20dashboard&image_size=landscape_16_9'
+          image: 'https://picsum.photos/id/3/1200/800'
         }
       ]
     }

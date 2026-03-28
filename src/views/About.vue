@@ -11,12 +11,12 @@
         <div class="info-content">
           <div class="info-text">
             <h2>公司简介</h2>
-            <p>ISemes科技专注于纺织行业智能化解决方案，基于人工智能和物联网技术，为纺织企业提供工业智能质检平台和纺织生产管理系统两大核心产品，实现从原料进仓到成品出仓的全流程智能化管理。</p>
+            <p>广州三思智联技术有限公司专注于纺织行业智能化解决方案，基于人工智能和物联网技术，为纺织企业提供工业智能质检平台和纺织生产管理系统两大核心产品，实现从原料进仓到成品出仓的全流程智能化管理。</p>
             <p>我们的工业智能质检平台采用时空联合定位算法，实现24小时不间断疵点检测，漏检率低至0.1%；纺织生产管理系统则覆盖客户资料管理、原料进仓退仓、生产订单管理、坯布进出仓等完整生产流程，帮助企业实现数字化转型。</p>
             <p>我们拥有一支由计算机视觉、机器学习、工业自动化和生产管理领域专家组成的技术团队，致力于将最新的信息技术应用于传统纺织行业，提升生产效率和产品质量。我们的解决方案已经在多家纺织企业成功应用，为客户带来了显著的经济效益。</p>
           </div>
           <div class="info-image">
-            <img src="https://console.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=industrial%20technology%20team%20working%20on%20AI%20quality%20inspection&image_size=landscape_16_9" alt="公司团队">
+            <img src="https://picsum.photos/id/26/1200/800" alt="公司团队">
           </div>
         </div>
       </div>

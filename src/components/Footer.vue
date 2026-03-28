@@ -3,8 +3,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-section about">
-          <h3>ISemes 科技</h3>
-          <p>打造高品质工业智能质检平台，引领纺织行业智能化革命。</p>
+          <h3>三思智联</h3>
+          <p>广州三思智联技术有限公司，打造高品质工业智能质检平台，引领纺织行业智能化革命。</p>
         </div>
         <div class="footer-section links">
           <h3>快速链接</h3>
@@ -26,7 +26,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; {{ new Date().getFullYear() }} ISemes 科技. 保留所有权利.</p>
+        <p>&copy; {{ new Date().getFullYear() }} 广州三思智联技术有限公司. 保留所有权利.</p>
       </div>
     </div>
   </footer>
