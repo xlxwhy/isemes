@@ -2,9 +2,12 @@
   <div class="home">
     <!-- Hero Section -->
     <section class="hero">
+      <div class="hero-background">
+        <img src="https://console.enterprise.trae.cn/api/ide/v1/text_to_image?prompt=modern%20industrial%20technology%20building%20with%20glass%20facade%20and%20blue%20sky&image_size=landscape_16_9" alt="工业智能科技">
+      </div>
       <div class="container">
         <div class="hero-content">
-          <h1>工业智能质检平台</h1>
+          <h1>打造高品质工业智能质检平台</h1>
           <p>基于人工智能图像识别技术，实现24小时不间断疵点检测</p>
           <a href="/products" class="btn btn-primary">了解产品</a>
         </div>
@@ -147,49 +150,98 @@ export default {
 
 <style scoped>
 .hero {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 100px 0;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
   text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: -1;
+  border-radius: 10px;
+  padding: 50px;
 }
 
 .hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 30px;
+  color: #666;
+  line-height: 1.6;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 30px;
-  border-radius: 50px;
+  padding: 15px 40px;
+  border-radius: 0;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   transition: all 0.3s ease;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
 }
 
 .btn-primary {
-  background-color: white;
-  color: #667eea;
+  background-color: #c8995d;
+  color: white;
+  border: 2px solid #c8995d;
 }
 
 .btn-primary:hover {
-  background-color: #f0f0f0;
+  background-color: transparent;
+  color: #c8995d;
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background-color: #667eea;
-  color: white;
+  background-color: transparent;
+  color: #c8995d;
+  border: 2px solid #c8995d;
   margin-top: 30px;
 }
 
 .btn-secondary:hover {
-  background-color: #5a6fd8;
+  background-color: #c8995d;
+  color: white;
   transform: translateY(-2px);
 }
 
@@ -201,7 +253,8 @@ export default {
 
 /* Common styles for all sections */
 .product-advantages, .product-features, .technical-advantages, .customer-benefits, .customer-reviews {
-  padding: 80px 0;
+  padding: 100px 0;
+  position: relative;
 }
 
 .product-features, .customer-reviews {
@@ -211,8 +264,25 @@ export default {
 .product-advantages h2, .product-features h2, .technical-advantages h2, .customer-benefits h2, .customer-reviews h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   color: #333;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-advantages h2::after, .product-features h2::after, .technical-advantages h2::after, .customer-benefits h2::after, .customer-reviews h2::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #c8995d;
 }
 
 /* Grid styles */
@@ -225,57 +295,101 @@ export default {
 /* Item styles */
 .advantage-item, .feature-item, .benefit-item {
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px 30px;
+  border-radius: 0;
+  box-shadow: none;
   text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.advantage-item::before, .feature-item::before, .benefit-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #c8995d;
+  transform: scaleY(0);
   transition: transform 0.3s ease;
 }
 
 .advantage-item:hover, .feature-item:hover, .benefit-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.advantage-item:hover::before, .feature-item:hover::before, .benefit-item:hover::before {
+  transform: scaleY(1);
 }
 
 .advantage-item h3, .feature-item h3, .benefit-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #667eea;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .advantage-item p, .feature-item p, .benefit-item p {
   color: #666;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 0.95rem;
 }
 
 /* Icon styles */
 .advantage-icon, .benefit-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  color: #667eea;
+  font-size: 3.5rem;
+  margin-bottom: 25px;
+  color: #c8995d;
 }
 
 /* Reviews section */
 .review-item {
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 35px;
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.review-item:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
 }
 
 .review-content {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .review-content p {
   color: #666;
-  line-height: 1.6;
-  font-style: italic;
+  line-height: 1.8;
+  font-style: normal;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 20px;
+}
+
+.review-content p::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 2rem;
+  color: #c8995d;
+  font-family: serif;
 }
 
 .review-author {
   text-align: right;
-  font-weight: bold;
-  color: #667eea;
+  font-weight: 600;
+  color: #c8995d;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
 }
 </style>

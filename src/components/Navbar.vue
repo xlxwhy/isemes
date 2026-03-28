@@ -17,11 +17,14 @@
 
 <style scoped>
 .navbar {
-  background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  position: sticky;
+  background-color: transparent;
+  position: absolute;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  padding: 20px 0;
+  transition: all 0.3s ease;
 }
 
 .container {
@@ -31,29 +34,47 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
 }
 
 .logo a {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #667eea;
+  color: #333;
   text-decoration: none;
+  letter-spacing: 1px;
 }
 
 .nav-links {
   display: flex;
-  gap: 30px;
+  gap: 40px;
 }
 
 .nav-link {
   color: #333;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 5px 0;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #c8995d;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #667eea;
+  color: #c8995d;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
 </style>
