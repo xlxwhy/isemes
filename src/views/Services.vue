@@ -41,31 +41,31 @@ export default {
       services: [
         {
           id: 1,
-          name: '软件开发',
-          icon: '💻',
-          description: '定制化软件开发服务，满足企业特定需求。',
-          detail: '我们提供从需求分析、设计、开发到测试、部署的全流程软件开发服务。我们的团队拥有丰富的开发经验，能够使用多种技术栈，包括Java、Python、JavaScript、Vue、React等，为客户打造高质量的软件产品。'
+          name: '客户资料管理',
+          icon: '👥',
+          description: '完善的客户信息管理系统，支持客户全称、简称、空差等信息的维护。',
+          detail: '提供客户资料的新增、编辑、查询功能，支持设置坯布进仓匹重限重、质量小数位和空差参数。客户简称用于布票显示，客户全称用于出厂单抬头打印，空差功能可在称重时自动调整重量。'
         },
         {
           id: 2,
-          name: '技术咨询',
-          icon: '📊',
-          description: '专业的技术咨询服务，帮助企业制定技术战略。',
-          detail: '我们的技术咨询团队由行业专家组成，能够为客户提供IT战略规划、数字化转型咨询、技术架构设计等服务，帮助企业做出明智的技术决策，提升技术竞争力。'
+          name: '原料管理服务',
+          icon: '📦',
+          description: '完整的原料进仓、退仓和库存管理流程，支持实时库存监控。',
+          detail: '提供原料进仓、退仓功能，支持抽称原料的重量管理和欠重计算。系统自动维护原料库存，包括进仓、退料、计划用料、损耗用料、废布用料、织布用料等多种库存状态的实时计算和监控。'
         },
         {
           id: 3,
-          name: '系统集成',
-          icon: '🔄',
-          description: '企业系统集成服务，实现不同系统之间的无缝对接。',
-          detail: '我们提供系统集成服务，帮助企业整合现有的各种业务系统，实现数据共享和业务流程自动化。我们能够处理复杂的系统集成项目，包括企业应用集成、数据集成、API管理等。'
+          name: '生产订单管理',
+          icon: '📋',
+          description: '从订单创建到布票打印的全流程生产订单管理。',
+          detail: '支持生产订单的创建、排产和布票打印，可设置客户别名和空差参数。提供原料信息关联和比例损耗设置，支持本单转料功能，方便更换原料批号。生产信息模块支持工资计算所需的各项参数设置。'
         },
         {
           id: 4,
-          name: 'IT运维',
-          icon: '🛠️',
-          description: '专业的IT运维服务，确保系统稳定运行。',
-          detail: '我们提供全方位的IT运维服务，包括系统监控、故障排除、性能优化、安全管理等。我们的运维团队24小时待命，确保客户的系统始终保持最佳运行状态。'
+          name: '坯布进出仓管理',
+          icon: '🚚',
+          description: '扫码出仓与库存出仓相结合的灵活出仓方式，支持码单打印。',
+          detail: '支持PDA扫码出仓和库存出仓两种方式，可批量取消出仓操作。提供出仓加重功能，支持按比例或固定重量调整出仓布匹重量。支持打印出货单，可根据客户需求定制打印模板。'
         }
       ]
     }
@@ -75,81 +75,134 @@ export default {
 
 <style scoped>
 .services-hero {
-  background-color: #667eea;
+  background-color: #c8995d;
   color: white;
-  padding: 80px 0;
+  padding: 100px 0;
   text-align: center;
 }
 
 .services-hero h1 {
   font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .services-list {
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .services-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  gap: 50px;
 }
 
 .service-card {
   background-color: white;
-  padding: 40px;
-  border-radius: 10px;
+  padding: 50px 40px;
+  border-radius: 0;
   text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #c8995d;
+  transform: scaleY(0);
   transition: transform 0.3s ease;
 }
 
 .service-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover::before {
+  transform: scaleY(1);
 }
 
 .service-icon {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  font-size: 4.5rem;
+  margin-bottom: 25px;
+  color: #c8995d;
 }
 
 .service-card h2 {
   font-size: 1.8rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #333;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .service-card p {
   font-size: 1.1rem;
   color: #666;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .service-details {
   background-color: #f8f9fa;
-  padding: 80px 0;
+  padding: 100px 0;
 }
 
 .service-details h2 {
   text-align: center;
   font-size: 2.5rem;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   color: #333;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .detail-item {
   background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  margin-bottom: 30px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  border-radius: 0;
+  margin-bottom: 40px;
+  box-shadow: none;
+  border: 1px solid #e9ecef;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: #c8995d;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.detail-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.detail-item:hover::before {
+  transform: scaleY(1);
 }
 
 .detail-item h3 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #667eea;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
 .detail-content p {

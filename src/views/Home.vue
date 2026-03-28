@@ -7,9 +7,10 @@
       </div>
       <div class="container">
         <div class="hero-content">
-          <h1>打造高品质工业智能质检平台</h1>
-          <p>基于人工智能图像识别技术，实现24小时不间断疵点检测</p>
+          <h1>纺织行业智能解决方案提供商</h1>
+          <p>工业智能质检平台 + 生产管理系统，为纺织企业提供全方位智能化服务</p>
           <a href="/products" class="btn btn-primary">了解产品</a>
+          <a href="/services" class="btn btn-secondary">查看服务</a>
         </div>
       </div>
     </section>
@@ -20,19 +21,19 @@
         <h2>产品优势</h2>
         <div class="advantages-grid">
           <div class="advantage-item">
-            <div class="advantage-icon">⏰</div>
-            <h3>7*24h检测</h3>
-            <p>全天候实时检测，实时停机提醒工人及时处理瑕疵，避免大量废布产生</p>
+            <div class="advantage-icon">🤖</div>
+            <h3>AI智能质检</h3>
+            <p>7*24小时不间断疵点检测，实时停机告警，漏检率不超2%，过检率不超20%</p>
           </div>
           <div class="advantage-item">
-            <div class="advantage-icon">🎯</div>
-            <h3>过检不超20%</h3>
-            <p>基于人工智能计算机视觉识别技术，全方位识别布面瑕疵，过滤不应检出瑕疵</p>
+            <div class="advantage-icon">📊</div>
+            <h3>生产全流程管理</h3>
+            <p>覆盖客户资料、原料进仓、生产订单、坯布进出仓的完整生产管理流程</p>
           </div>
           <div class="advantage-item">
-            <div class="advantage-icon">✅</div>
-            <h3>漏检不超2%</h3>
-            <p>多种可检测疵点，且随着系统智能学习逐步添加完善，检测环境纯净干扰少</p>
+            <div class="advantage-icon">⚡</div>
+            <h3>实时数据监控</h3>
+            <p>生产进度、库存状态、质量检测实时监控，云端日报随时查看</p>
           </div>
         </div>
       </div>
@@ -44,16 +45,16 @@
         <h2>产品功能</h2>
         <div class="features-grid">
           <div class="feature-item">
-            <h3>边织边检</h3>
-            <p>一边织布一边检测，实时停机，有效提升工人看机效率</p>
+            <h3>智能质检功能</h3>
+            <p>边织边检、实时停机告警、可调节检测灵敏度、时空联合定位算法</p>
           </div>
           <div class="feature-item">
-            <h3>云端日报</h3>
-            <p>历史检出情况云端查看，减少的损失随时了解</p>
+            <h3>生产管理功能</h3>
+            <p>客户资料管理、原料进仓退仓、生产订单管理、布票打印、扫码出仓</p>
           </div>
           <div class="feature-item">
-            <h3>云端监控</h3>
-            <p>设备状态实时监控，确保生产稳定运行</p>
+            <h3>数据分析功能</h3>
+            <p>云端日报、实时库存监控、生产数据统计、质量检测报表</p>
           </div>
         </div>
       </div>
