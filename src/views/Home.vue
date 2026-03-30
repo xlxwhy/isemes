@@ -9,8 +9,8 @@
         <div class="hero-content">
           <h1>针织织厂管理系统专业方案商</h1>
           <p>广州三思智联技术有限公司</p>
-          <a href="/products" class="btn btn-primary">了解产品</a>
-          <a href="/services" class="btn btn-secondary">查看服务</a>
+          <a href="#/products" class="btn btn-primary">了解产品</a>
+          <a href="#/services" class="btn btn-secondary">查看服务</a>
         </div>
       </div>
     </section>
