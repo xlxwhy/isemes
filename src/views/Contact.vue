@@ -37,7 +37,7 @@
             <div class="info-icon location-icon"></div>
             <div>
               <h3>地址</h3>
-              <p>北京市海淀区中关村科技园区</p>
+              <p>广州市天河区长湴白沙水路85号27房号</p>
             </div>
           </div>
           <div class="info-item">
@@ -51,7 +51,7 @@
             <div class="info-icon email-icon"></div>
             <div>
               <h3>邮箱</h3>
-              <p>contact@isemes.com</p>
+              <p>public@isemes.com</p>
             </div>
           </div>
           <div class="info-item">

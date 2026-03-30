@@ -39,31 +39,31 @@ export default {
       services: [
         {
           id: 1,
-          name: '客户资料管理',
-          icon: 'customer-icon',
-          description: '完善的客户信息管理系统，支持客户全称、简称、空差等信息的维护。',
-          detail: '提供客户资料的新增、编辑、查询功能，支持设置坯布进仓匹重限重、质量小数位和空差参数。客户简称用于布票显示，客户全称用于出厂单抬头打印，空差功能可在称重时自动调整重量。'
+          name: '机台监控服务',
+          icon: 'monitor-icon',
+          description: '实时监控机台状态，随时随地掌握生产数据，及时发现和处理生产异常。',
+          detail: '提供24小时不间断的机台状态监控，支持手机端和电脑端实时查看。系统自动采集生产数据，包括开机时间、织布数量、效率等关键指标，帮助企业实时掌握生产情况。'
         },
         {
           id: 2,
-          name: '原料管理服务',
-          icon: 'material-icon',
-          description: '完整的原料进仓、退仓和库存管理流程，支持实时库存监控。',
-          detail: '提供原料进仓、退仓功能，支持抽称原料的重量管理和欠重计算。系统自动维护原料库存，包括进仓、退料、计划用料、损耗用料、废布用料、织布用料等多种库存状态的实时计算和监控。'
+          name: '工资统计服务',
+          icon: 'salary-icon',
+          description: '自动计算工人工资，减少人工统计误差，提高工资核算效率。',
+          detail: '根据机台采集的数据自动计算工人工资，支持多种工资计算方式。系统生成详细的工资报表，包括每个人的生产产量、工时、工资等信息，减少人工统计工作量。'
         },
         {
           id: 3,
-          name: '生产订单管理',
-          icon: 'order-icon',
-          description: '从订单创建到布票打印的全流程生产订单管理。',
-          detail: '支持生产订单的创建、排产和布票打印，可设置客户别名和空差参数。提供原料信息关联和比例损耗设置，支持本单转料功能，方便更换原料批号。生产信息模块支持工资计算所需的各项参数设置。'
+          name: '生产报表服务',
+          icon: 'report-icon',
+          description: '自动生成各类生产报表，数据精准，减少人工整理时间。',
+          detail: '系统自动生成生产日报、月报、年报等各类报表，包括产量统计、效率分析、设备利用率等。报表数据实时更新，帮助企业管理层快速了解生产情况，做出决策。'
         },
         {
           id: 4,
-          name: '坯布进出仓管理',
-          icon: 'warehouse-icon',
-          description: '扫码出仓与库存出仓相结合的灵活出仓方式，支持码单打印。',
-          detail: '支持PDA扫码出仓和库存出仓两种方式，可批量取消出仓操作。提供出仓加重功能，支持按比例或固定重量调整出仓布匹重量。支持打印出货单，可根据客户需求定制打印模板。'
+          name: '定制化开发服务',
+          icon: 'custom-icon',
+          description: '根据企业需求快速定制功能模块，满足不同企业的个性化需求。',
+          detail: '提供本地服务器部署或云端部署两种方式，可根据企业规模和需求选择。支持功能模块的定制开发，包括特定的报表格式、数据采集方式、工资计算规则等。'
         }
       ]
     }
@@ -135,102 +135,102 @@ export default {
   box-shadow: 0 12px 32px rgba(237, 137, 54, 0.3);
 }
 
-/* Customer Icon */
-.customer-icon::before, .customer-icon::after {
+/* Monitor Icon */
+.monitor-icon::before, .monitor-icon::after {
   content: '';
   position: absolute;
   background-color: white;
-  border-radius: 50%;
 }
 
-.customer-icon::before {
-  width: 30px;
-  height: 30px;
+.monitor-icon::before {
+  width: 40px;
+  height: 25px;
   top: 20px;
-  left: 30px;
+  left: 25px;
+  border-radius: 4px 4px 0 0;
 }
 
-.customer-icon::after {
-  width: 50px;
-  height: 28px;
+.monitor-icon::after {
+  width: 10px;
+  height: 6px;
   bottom: 18px;
-  left: 20px;
-  border-radius: 0 0 25px 25px;
+  left: 40px;
+  background-color: white;
+  border-radius: 0 0 3px 3px;
 }
 
-/* Material Icon */
-.material-icon::before, .material-icon::after {
+/* Salary Icon */
+.salary-icon::before, .salary-icon::after {
   content: '';
   position: absolute;
   background-color: white;
+  border-radius: 4px;
 }
 
-.material-icon::before {
+.salary-icon::before {
+  width: 35px;
+  height: 30px;
+  top: 25px;
+  left: 27px;
+  border-radius: 6px;
+}
+
+.salary-icon::after {
+  width: 25px;
+  height: 4px;
+  top: 35px;
+  left: 32px;
+  box-shadow: 0 8px 0 white;
+}
+
+/* Report Icon */
+.report-icon::before, .report-icon::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.report-icon::before {
   width: 40px;
   height: 35px;
   top: 20px;
   left: 25px;
   border-radius: 4px;
-  box-shadow: 0 0 0 2px white inset;
-  background-color: transparent;
 }
 
-.material-icon::after {
-  width: 20px;
-  height: 35px;
-  top: 28px;
-  left: 35px;
-  background-color: white;
-  transform: rotate(45deg);
-}
-
-/* Order Icon */
-.order-icon::before, .order-icon::after {
-  content: '';
-  position: absolute;
-  background-color: white;
-  border-radius: 4px;
-}
-
-.order-icon::before {
-  width: 45px;
-  height: 30px;
-  top: 25px;
-  left: 22px;
-  border-radius: 8px;
-}
-
-.order-icon::after {
-  width: 35px;
+.report-icon::after {
+  width: 30px;
   height: 4px;
-  top: 35px;
-  left: 27px;
+  top: 30px;
+  left: 30px;
   box-shadow: 0 8px 0 white, 0 16px 0 white;
 }
 
-/* Warehouse Icon */
-.warehouse-icon::before, .warehouse-icon::after {
+/* Custom Icon */
+.custom-icon::before, .custom-icon::after {
   content: '';
   position: absolute;
   background-color: white;
 }
 
-.warehouse-icon::before {
-  width: 35px;
-  height: 25px;
-  top: 30px;
-  left: 27px;
-  border-radius: 4px;
+.custom-icon::before {
+  width: 15px;
+  height: 15px;
+  top: 25px;
+  left: 37px;
+  border-radius: 50%;
 }
 
-.warehouse-icon::after {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 25px 18px 25px;
-  border-color: transparent transparent white transparent;
-  top: 18px;
-  left: 20px;
+.custom-icon::after {
+  width: 30px;
+  height: 20px;
+  bottom: 20px;
+  left: 30px;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 4px;
+  transform: rotate(45deg);
 }
 
 .service-card h2 {

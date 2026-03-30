@@ -21,7 +21,7 @@
           <div class="contact-info">
             <p><span class="icon">📍</span> 北京市海淀区中关村科技园区</p>
             <p><span class="icon">📞</span> +86 010-12345678</p>
-            <p><span class="icon">✉️</span> contact@isemes.com</p>
+            <p><span class="icon">✉️</span> public@isemes.com</p>
           </div>
         </div>
       </div>

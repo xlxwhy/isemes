@@ -7,8 +7,8 @@
       </div>
       <div class="container">
         <div class="hero-content">
-          <h1>纺织行业智能解决方案提供商</h1>
-          <p>工业智能质检平台 + 生产管理系统，为纺织企业提供全方位智能化服务</p>
+          <h1>广州三思智联技术有限公司</h1>
+          <p>针织织厂管理系统专业方案商</p>
           <a href="/products" class="btn btn-primary">了解产品</a>
           <a href="/services" class="btn btn-secondary">查看服务</a>
         </div>
@@ -45,16 +45,20 @@
         <h2>产品功能</h2>
         <div class="features-grid">
           <div class="feature-item">
-            <h3>智能质检功能</h3>
-            <p>边织边检、实时停机告警、可调节检测灵敏度、时空联合定位算法</p>
+            <h3>机台监控 随时随地</h3>
+            <p>实时监控机台状态，支持手机端随时随地查看生产数据，及时掌握生产情况</p>
           </div>
           <div class="feature-item">
-            <h3>生产管理功能</h3>
-            <p>客户资料管理、原料进仓退仓、生产订单管理、布票打印、扫码出仓</p>
+            <h3>工资统计 精准快速</h3>
+            <p>自动计算工人工资，减少人工统计误差，提高工资核算效率</p>
           </div>
           <div class="feature-item">
-            <h3>数据分析功能</h3>
-            <p>云端日报、实时库存监控、生产数据统计、质量检测报表</p>
+            <h3>生产报表 精炼省时</h3>
+            <p>自动生成各类生产报表，数据精准，减少人工整理时间，提升管理效率</p>
+          </div>
+          <div class="feature-item">
+            <h3>本地或云端部署 快速定制</h3>
+            <p>支持本地服务器部署或云端部署，可根据企业需求快速定制功能模块</p>
           </div>
         </div>
       </div>
