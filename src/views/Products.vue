@@ -146,7 +146,7 @@ export default {
 
 <style scoped>
 .products-hero {
-  background-color: var(--primary-color);
+  background-color: var(--color-blue-innovation); /* 创新蓝 - 代表产品创新与科技 */
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -161,7 +161,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(19, 66, 115, 0.9) 0%, rgba(19, 66, 115, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(42, 61, 102, 0.9) 0%, rgba(42, 61, 102, 0.8) 100%);
   z-index: 1;
 }
 
@@ -177,6 +177,7 @@ export default {
   margin-bottom: 16px;
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
 }
 
 .hero-subtitle {

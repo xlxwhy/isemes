@@ -341,9 +341,10 @@ export default {
 
 <style scoped>
 .jobs-hero {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background-color: var(--color-blue-opportunity); /* 机遇蓝 - 代表人才与机会 */
   color: white;
-  padding: 120px 0;
+  padding: 100px 0;
+  text-align: center;
   position: relative;
   overflow: hidden;
 }
@@ -352,6 +353,7 @@ export default {
   position: relative;
   z-index: 2;
   text-align: center;
+  width: 100%;
 }
 
 .jobs-hero h1 {
@@ -361,6 +363,7 @@ export default {
   margin-bottom: 16px;
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
 }
 
 .hero-subtitle {

@@ -5,7 +5,7 @@
     'navbar-about': currentRoute === '/about',
     'navbar-products': currentRoute === '/products',
     'navbar-services': currentRoute === '/services',
-    'navbar-jobs': currentRoute === '/jobs',
+    'navbar-jobs': currentRoute.startsWith('/jobs'),
     'navbar-contact': currentRoute === '/contact'
   }">
     <div class="container">
@@ -81,15 +81,24 @@ export default {
   background-color: transparent;
 }
 
-.navbar-about,
-.navbar-products,
-.navbar-services,
+.navbar-about {
+  background-color: var(--color-blue-professional); /* 专业蓝 - 代表公司背景与愿景 */
+}
+
+.navbar-products {
+  background-color: var(--color-blue-innovation); /* 创新蓝 - 代表产品创新与科技 */
+}
+
+.navbar-services {
+  background-color: var(--color-blue-service); /* 服务蓝 - 代表专业服务与技术支持 */
+}
+
 .navbar-contact {
-  background-color: var(--primary-color);
+  background-color: var(--color-blue-trust); /* 信任蓝 - 代表沟通与联系 */
 }
 
 .navbar-jobs {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background-color: var(--color-blue-opportunity); /* 机遇蓝 - 代表人才与机会 */
 }
 
 .navbar-scrolled {
@@ -97,6 +106,11 @@ export default {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   position: fixed;
   padding: 16px 0;
+}
+
+/* Ensure consistent toggle button color in all states */
+.navbar-scrolled .menu-toggle-open span {
+  background-color: var(--primary-color);
 }
 
 .container {
@@ -236,6 +250,35 @@ export default {
   
   .logo-text {
     font-size: 1.5rem;
+  }
+  
+  /* Mobile scroll styles */
+  .navbar-scrolled {
+    padding: 12px 0;
+  }
+  
+  .navbar-scrolled .logo-text {
+    color: var(--primary-color);
+  }
+  
+  .navbar-scrolled .nav-link {
+    color: var(--primary-color) !important;
+  }
+  
+  .navbar-scrolled .menu-toggle span {
+    background-color: var(--primary-color);
+  }
+}
+
+/* Page header top offset for mobile */
+@media (max-width: 768px) {
+  .hero h1,
+  .about-hero h1,
+  .products-hero h1,
+  .services-hero h1,
+  .jobs-hero h1,
+  .contact-hero h1 {
+    margin-top: 30px;
   }
 }
 </style>

@@ -40,7 +40,7 @@
 
 <style scoped>
 .about-hero {
-  background-color: var(--primary-color);
+  background-color: var(--color-blue-professional); /* 专业蓝 - 代表公司背景与愿景 */
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -55,7 +55,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(19, 66, 115, 0.9) 0%, rgba(19, 66, 115, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(30, 90, 138, 0.9) 0%, rgba(30, 90, 138, 0.8) 100%);
   z-index: 1;
 }
 
@@ -71,6 +71,7 @@
   margin-bottom: 16px;
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
 }
 
 .hero-subtitle {

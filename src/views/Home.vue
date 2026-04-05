@@ -240,6 +240,7 @@ export default {
   color: #333;
   font-weight: 600;
   letter-spacing: 1px;
+  padding-top: 20px;
 }
 
 .hero p {

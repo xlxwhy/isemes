@@ -1,19 +1,43 @@
 :root {
-  /* 主色调 - 深青色代表专业、信任与技术深度 */
-  --primary-color: #0a3d62;
-  /* 辅助色 - 青绿色代表效率、增长与纺织行业的自然属性 */
-  --secondary-color: #3c6e71;
-  /* 强调色 - 柔和琥珀色代表纺织工艺的温暖与精致 */
-  --accent-color: #d4a76a;
+  /* 蓝色主题配色方案 - 用于菜单及页面顶部底色切换 */
+  /* 1. 深海蓝：代表专业、信任与技术深度，适合首页 */
+  --color-blue-deep: #1a4b7a;
+  /* 2. 专业蓝：代表公司背景与愿景，适合关于我们页面 */
+  --color-blue-professional: #1e5a8a;
+  /* 3. 创新蓝：代表产品创新与科技，适合产品页面 */
+  --color-blue-innovation: #2a3d66;
+  /* 4. 服务蓝：代表专业服务与技术支持，适合服务页面 */
+  --color-blue-service: #2866a1;
+  /* 5. 信任蓝：代表沟通与联系，适合联系我们页面 */
+  --color-blue-trust: #194d7a;
+  /* 6. 机遇蓝：代表人才与机会，适合招聘页面 */
+  --color-blue-opportunity: #2c5c97;
+  
+  /* 主色调（保留兼容） */
+  --primary-color: #1a4b7a;
+  /* 辅助色（保留兼容） */
+  --secondary-color: #2d7a63;
+  /* 强调色（保留兼容） */
+  --accent-color: #e67e22;
+  /* 次要强调色（保留兼容） */
+  --accent-secondary: #3498db;
   /* 中性色 */
-  --light-color: #f8f9fa;
-  --dark-color: #1e2a36;
+  --light-color: #f7f9fc;
+  --dark-color: #1a2332;
   --text-color: #2c3e50;
-  --text-light: #6c757d;
-  --border-color: #dee2e6;
+  --text-light: #64748b;
+  --text-lighter: #94a3b8;
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
   /* 背景色 */
   --bg-primary: #ffffff;
-  --bg-secondary: #f4f7fa;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
+  /* 功能色 */
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --error-color: #ef4444;
+  --info-color: #3b82f6;
 }
 
 * {

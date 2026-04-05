@@ -28,5 +28,11 @@ body {
 
 main {
   min-height: calc(100vh - 140px);
+  transition: padding-top 0.3s ease;
+}
+
+/* Add padding when navbar is fixed */
+.navbar-scrolled + main {
+  padding-top: 90px; /* Adjust based on navbar height */
 }
 </style>

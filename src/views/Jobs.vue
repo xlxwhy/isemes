@@ -69,8 +69,8 @@
           <div class="feature-item">
             <div class="feature-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path>
-                <path d="M12 15v-1m0-4h.01"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 8v4m0 4h.01"></path>
               </svg>
             </div>
             <h3>安全可靠</h3>
@@ -90,7 +90,7 @@ export default {
 
 <style scoped>
 .jobs-hero {
-  background-color: var(--primary-color);
+  background-color: var(--color-blue-opportunity); /* 机遇蓝 - 代表人才与机会 */
   color: white;
   padding: 100px 0;
   text-align: center;
@@ -105,13 +105,14 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(19, 66, 115, 0.9) 0%, rgba(19, 66, 115, 0.8) 100%);
+  background: linear-gradient(135deg, rgba(44, 92, 151, 0.9) 0%, rgba(44, 92, 151, 0.8) 100%);
   z-index: 1;
 }
 
 .jobs-hero .container {
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .jobs-hero h1 {
@@ -121,6 +122,7 @@ export default {
   margin-bottom: 16px;
   color: white;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding-top: 20px;
 }
 
 .hero-subtitle {
