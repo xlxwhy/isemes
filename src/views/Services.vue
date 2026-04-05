@@ -3,6 +3,7 @@
     <section class="services-hero">
       <div class="container">
         <h1>我们的服务</h1>
+        <p class="hero-subtitle">为针织织厂提供全方位的智能化管理服务</p>
       </div>
     </section>
 
@@ -77,13 +78,41 @@ export default {
   color: white;
   padding: 100px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(19, 66, 115, 0.9) 0%, rgba(19, 66, 115, 0.8) 100%);
+  z-index: 1;
+}
+
+.services-hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .services-hero h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 800;
   letter-spacing: -0.5px;
-  margin-bottom: 0;
+  margin-bottom: 16px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+  font-weight: 400;
   color: white;
 }
 
@@ -318,5 +347,89 @@ export default {
   line-height: 1.8;
   color: var(--text-light);
   margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-hero {
+    padding: 80px 0;
+  }
+  
+  .services-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 16px;
+  }
+  
+  .services-list {
+    padding: 60px 0;
+  }
+  
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .service-card {
+    padding: 40px 30px;
+  }
+  
+  .service-card h2 {
+    font-size: 1.8rem;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+  }
+  
+  .service-details {
+    padding: 60px 0;
+  }
+  
+  .service-details h2 {
+    font-size: 2rem;
+  }
+  
+  .detail-item {
+    padding: 40px 30px;
+    margin-bottom: 30px;
+  }
+  
+  .detail-item h3 {
+    font-size: 1.6rem;
+  }
+  
+  .detail-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .service-card {
+    padding: 30px 24px;
+  }
+  
+  .service-card h2 {
+    font-size: 1.6rem;
+  }
+  
+  .service-details h2 {
+    font-size: 1.8rem;
+  }
+  
+  .detail-item {
+    padding: 30px 24px;
+  }
+  
+  .detail-item h3 {
+    font-size: 1.4rem;
+  }
 }
 </style>

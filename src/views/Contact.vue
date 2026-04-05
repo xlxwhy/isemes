@@ -3,6 +3,7 @@
     <section class="contact-hero">
       <div class="container">
         <h1>联系我们</h1>
+        <p class="hero-subtitle">如有任何疑问或需求，欢迎随时与我们联系</p>
       </div>
     </section>
 
@@ -44,7 +45,7 @@
             <div class="info-icon phone-icon"></div>
             <div>
               <h3>电话</h3>
-              <p>+86 010-12345678</p>
+              <p>+86 13763317850</p>
             </div>
           </div>
           <div class="info-item">
@@ -98,14 +99,44 @@ export default {
 .contact-hero {
   background-color: var(--primary-color);
   color: white;
-  padding: 80px 0;
+  padding: 100px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(19, 66, 115, 0.9) 0%, rgba(19, 66, 115, 0.8) 100%);
+  z-index: 1;
+}
+
+.contact-hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .contact-hero h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
   color: white;
-  margin-bottom: 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+  font-weight: 400;
+  color: white;
 }
 
 .contact-content {
@@ -124,6 +155,8 @@ export default {
   color: var(--primary-color);
   position: relative;
   padding-bottom: 15px;
+  display: inline-block;
+  text-align: left;
 }
 
 .contact-form h2::after, .contact-info h2::after {
@@ -131,10 +164,11 @@ export default {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 60px;
+  width: 100%;
   height: 3px;
   background-color: var(--accent-color);
   border-radius: 2px;
+  transform: none;
 }
 
 .form-group {
@@ -338,5 +372,73 @@ export default {
   margin: 0;
   font-size: 1rem;
   line-height: 1.6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 80px 0;
+  }
+  
+  .contact-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 16px;
+  }
+  
+  .contact-content {
+    padding: 60px 0;
+  }
+  
+  .contact-content .container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+  
+  .contact-form h2, .contact-info h2 {
+    font-size: 1.8rem;
+  }
+  
+  .form-group {
+    margin-bottom: 24px;
+  }
+  
+  .form-group input, .form-group textarea {
+    padding: 14px 18px;
+  }
+  
+  .info-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .info-icon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-form h2, .contact-info h2 {
+    font-size: 1.6rem;
+  }
+  
+  .btn-primary {
+    padding: 14px 32px;
+    width: 100%;
+  }
+  
+  .info-item {
+    padding: 16px;
+    gap: 16px;
+  }
 }
 </style>

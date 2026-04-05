@@ -1,19 +1,19 @@
 :root {
-  /* 主色调 - 深蓝色代表专业和信任 */
-  --primary-color: #1a365d;
-  /* 辅助色 - 浅蓝色代表技术和创新 */
-  --secondary-color: #3182ce;
-  /* 强调色 - 橙色代表活力和纺织行业特性 */
-  --accent-color: #ed8936;
+  /* 主色调 - 深青色代表专业、信任与技术深度 */
+  --primary-color: #0a3d62;
+  /* 辅助色 - 青绿色代表效率、增长与纺织行业的自然属性 */
+  --secondary-color: #3c6e71;
+  /* 强调色 - 柔和琥珀色代表纺织工艺的温暖与精致 */
+  --accent-color: #d4a76a;
   /* 中性色 */
-  --light-color: #f7fafc;
-  --dark-color: #2d3748;
-  --text-color: #2d3748;
-  --text-light: #718096;
-  --border-color: #e2e8f0;
+  --light-color: #f8f9fa;
+  --dark-color: #1e2a36;
+  --text-color: #2c3e50;
+  --text-light: #6c757d;
+  --border-color: #dee2e6;
   /* 背景色 */
   --bg-primary: #ffffff;
-  --bg-secondary: #f7fafc;
+  --bg-secondary: #f4f7fa;
 }
 
 * {

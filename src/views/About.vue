@@ -3,6 +3,7 @@
     <section class="about-hero">
       <div class="container">
         <h1>关于我们</h1>
+        <p class="hero-subtitle">专注于针织织厂智能化管理解决方案的专业团队</p>
       </div>
     </section>
 
@@ -16,7 +17,7 @@
             <p>我们拥有一支经验丰富的技术团队，致力于将最新的信息技术应用于传统针织行业，提升生产效率和管理水平。我们的解决方案已经在多家针织企业成功应用，为客户带来了显著的经济效益和管理提升。</p>
           </div>
           <div class="info-image">
-            <img src="https://picsum.photos/id/26/1200/800" alt="公司团队">
+            <img src="https://picsum.photos/id/119/1200/800" alt="现代工业科技">
           </div>
         </div>
       </div>
@@ -39,16 +40,46 @@
 
 <style scoped>
 .about-hero {
-  background-color: #c8995d;
+  background-color: var(--primary-color);
   color: white;
   padding: 100px 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(19, 66, 115, 0.9) 0%, rgba(19, 66, 115, 0.8) 100%);
+  z-index: 1;
+}
+
+.about-hero .container {
+  position: relative;
+  z-index: 2;
 }
 
 .about-hero h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+  font-weight: 400;
+  color: white;
 }
 
 .company-info {
@@ -73,6 +104,8 @@
   letter-spacing: 0.5px;
   position: relative;
   padding-bottom: 15px;
+  display: inline-block;
+  text-align: left;
 }
 
 .info-text h2::after {
@@ -80,9 +113,10 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 60px;
+  width: 100%;
   height: 3px;
-  background-color: #c8995d;
+  background-color: var(--accent-color);
+  transform: none;
 }
 
 .info-text p {
@@ -139,7 +173,7 @@
   left: 0;
   width: 5px;
   height: 100%;
-  background-color: #c8995d;
+  background-color: var(--accent-color);
   transform: scaleY(0);
   transition: transform 0.3s ease;
 }
@@ -165,5 +199,81 @@
   font-size: 1.1rem;
   line-height: 1.8;
   color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 80px 0;
+  }
+  
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+    padding: 0 16px;
+  }
+  
+  .company-info {
+    padding: 60px 0;
+  }
+  
+  .info-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .info-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .info-text p {
+    font-size: 1rem;
+  }
+  
+  .info-image img {
+    height: 300px;
+  }
+  
+  .mission-vision {
+    padding: 60px 0;
+  }
+  
+  .mission-vision .container {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .mission, .vision {
+    padding: 40px 30px;
+  }
+  
+  .mission h3, .vision h3 {
+    font-size: 1.5rem;
+  }
+  
+  .mission p, .vision p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .info-text h2 {
+    font-size: 1.6rem;
+  }
+  
+  .info-image img {
+    height: 250px;
+  }
+  
+  .mission, .vision {
+    padding: 30px 20px;
+  }
 }
 </style>

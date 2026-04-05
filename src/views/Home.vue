@@ -7,8 +7,8 @@
       </div>
       <div class="container">
         <div class="hero-content">
-          <h1>针织织厂管理系统专业方案商</h1>
-          <p>广州三思智联技术有限公司</p>
+          <h1>针织织厂智能管理系统</h1>
+          <p>广州三思智联技术有限公司 - 专注于纺织行业数字化转型的专业方案商</p>
           <a href="#/products" class="btn btn-primary">了解产品</a>
           <a href="#/services" class="btn btn-secondary">查看服务</a>
         </div>
@@ -18,22 +18,22 @@
     <!-- Product Advantages Section -->
     <section class="product-advantages">
       <div class="container">
-        <h2>产品优势</h2>
+        <h2>核心优势</h2>
         <div class="advantages-grid">
           <div class="advantage-item">
             <div class="advantage-icon ai-icon"></div>
             <h3>AI智能质检</h3>
-            <p>7*24小时不间断疵点检测，实时停机告警，漏检率不超2%，过检率不超20%</p>
+            <p>7*24小时不间断疵点检测，实时停机告警，漏检率不超2%，过检率不超20%，有效降低废布损失80%以上</p>
           </div>
           <div class="advantage-item">
             <div class="advantage-icon workflow-icon"></div>
             <h3>生产全流程管理</h3>
-            <p>覆盖客户资料、原料进仓、生产订单、坯布进出仓的完整生产管理流程</p>
+            <p>覆盖客户资料、原料进仓、生产订单、坯布进出仓的完整生产管理流程，实现数字化、智能化管理</p>
           </div>
           <div class="advantage-item">
             <div class="advantage-icon monitor-icon"></div>
             <h3>实时数据监控</h3>
-            <p>生产进度、库存状态、质量检测实时监控，云端日报随时查看</p>
+            <p>机台状态、生产进度、库存状态、质量检测实时监控，云端日报随时查看，生产情况一目了然</p>
           </div>
         </div>
       </div>
@@ -42,23 +42,43 @@
     <!-- Product Features Section -->
     <section class="product-features">
       <div class="container">
-        <h2>产品功能</h2>
+        <h2>核心功能模块</h2>
         <div class="features-grid">
           <div class="feature-item">
-            <h3>机台监控 随时随地</h3>
-            <p>实时监控机台状态，支持手机端随时随地查看生产数据，及时掌握生产情况</p>
+            <h3>织机监控系统</h3>
+            <p>实时监控机台运行状态、产量数据、效率指标，支持数据看板和监控大屏展示，及时掌握生产情况</p>
           </div>
           <div class="feature-item">
-            <h3>工资统计 精准快速</h3>
-            <p>自动计算工人工资，减少人工统计误差，提高工资核算效率</p>
+            <h3>工厂基础设置</h3>
+            <p>工厂管理、车间管理、设备组管理、机型管理、机台管理、班级管理、员工管理等基础数据维护</p>
           </div>
           <div class="feature-item">
-            <h3>生产报表 精炼省时</h3>
-            <p>自动生成各类生产报表，数据精准，减少人工整理时间，提升管理效率</p>
+            <h3>快捷生产管理</h3>
+            <p>客户资料管理、原料进仓、生产订单创建、坯布出仓等快速生产流程操作</p>
           </div>
           <div class="feature-item">
-            <h3>本地或云端部署 快速定制</h3>
-            <p>支持本地服务器部署或云端部署，可根据企业需求快速定制功能模块</p>
+            <h3>原料管理系统</h3>
+            <p>原材料管理、原料绑定、原料进仓、原料退料、原料领用、原料库存、原料流水全程跟踪</p>
+          </div>
+          <div class="feature-item">
+            <h3>坯布管理系统</h3>
+            <p>坯布出仓、进仓查询、库存管理、坯色疵点记录、仓库信息管理等全流程管理</p>
+          </div>
+          <div class="feature-item">
+            <h3>订单管理系统</h3>
+            <p>生产订单创建、订单查询、订单排产、排产记录等订单全生命周期管理</p>
+          </div>
+          <div class="feature-item">
+            <h3>生产工资系统</h3>
+            <p>工资方案设置、日工资计算、月工资统计、工资明细查询，支持多种工资计算方式</p>
+          </div>
+          <div class="feature-item">
+            <h3>工厂报表系统</h3>
+            <p>运行记录、生产记录、圈数统计、产量报表、工资查询、换布记录等多维度报表分析</p>
+          </div>
+          <div class="feature-item">
+            <h3>扫码应用系统</h3>
+            <p>支持按布种出仓、按机台出仓、取消出仓、手动进仓、库存盘点、库存查询等移动端操作</p>
           </div>
         </div>
       </div>
@@ -70,16 +90,16 @@
         <h2>技术优势</h2>
         <div class="advantages-grid">
           <div class="advantage-item">
-            <h3>高精度识别</h3>
-            <p>适应所有国产及进口品牌的单面机型，识别精度高，漏检率低</p>
+            <h3>高精度AI识别</h3>
+            <p>采用先进的AI算法，适应所有国产及进口品牌的单面机型，识别精度高达98%以上，漏检率低至2%以下</p>
           </div>
           <div class="advantage-item">
-            <h3>本地部署</h3>
-            <p>本地部署设备，安装快捷简便、位置固定、维护轻松简单</p>
+            <h3>灵活部署方案</h3>
+            <p>支持本地服务器部署或云端部署，安装快捷简便，位置灵活，维护轻松简单，满足不同企业的需求</p>
           </div>
           <div class="advantage-item">
-            <h3>端云一体</h3>
-            <p>采用时空联合定位算法，响应速度快，维护成本低，检测效率高</p>
+            <h3>端云一体化架构</h3>
+            <p>采用时空联合定位算法，响应速度快，维护成本低，检测效率高，实现云端数据同步与分析</p>
           </div>
         </div>
       </div>
@@ -92,18 +112,33 @@
         <div class="benefits-grid">
           <div class="benefit-item">
             <div class="benefit-icon waste-reduction-icon"></div>
-            <h3>废布量极大减少</h3>
-            <p>废布经济损失降低80%以上</p>
+            <h3>废布损失大幅降低</h3>
+            <p>AI智能质检实时发现疵点，废布经济损失降低80%以上，每年可为企业节省大量成本</p>
           </div>
           <div class="benefit-item">
             <div class="benefit-icon efficiency-icon"></div>
-            <h3>工人效率提升</h3>
-            <p>从看4台机到看6台机，工作积极性变高</p>
+            <h3>生产效率显著提升</h3>
+            <p>工人看管机台数量从4台增加到6台，工作效率提升50%，同时工作积极性显著提高</p>
           </div>
           <div class="benefit-item">
             <div class="benefit-icon order-growth-icon"></div>
-            <h3>订单量显著提升</h3>
-            <p>布匹品质卓越，订单源源不断</p>
+            <h3>产品质量与订单量提升</h3>
+            <p>布匹品质得到保障，客户满意度提高，订单量显著增加，企业竞争力增强</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon workflow-icon"></div>
+            <h3>管理效率提升</h3>
+            <p>自动化数据采集与报表生成，减少人工统计工作量，管理决策更加精准高效</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon monitor-icon"></div>
+            <h3>实时掌握生产情况</h3>
+            <p>随时随地查看生产数据，及时发现和解决问题，生产管理更加灵活便捷</p>
+          </div>
+          <div class="benefit-item">
+            <div class="benefit-icon ai-icon"></div>
+            <h3>技术升级与创新</h3>
+            <p>引入AI技术，实现数字化转型，提升企业技术水平和市场竞争力</p>
           </div>
         </div>
       </div>
@@ -226,26 +261,26 @@ export default {
 }
 
 .btn-primary {
-  background-color: #c8995d;
+  background-color: var(--accent-color);
   color: white;
-  border: 2px solid #c8995d;
+  border: 2px solid var(--accent-color);
 }
 
 .btn-primary:hover {
   background-color: transparent;
-  color: #c8995d;
+  color: var(--accent-color);
   transform: translateY(-2px);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: #c8995d;
-  border: 2px solid #c8995d;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
   margin-top: 30px;
 }
 
 .btn-secondary:hover {
-  background-color: #c8995d;
+  background-color: var(--accent-color);
   color: white;
   transform: translateY(-2px);
 }
@@ -274,9 +309,10 @@ export default {
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
 }
 
 .product-advantages h2::after, .product-features h2::after, .technical-advantages h2::after, .customer-benefits h2::after, .customer-reviews h2::after {
@@ -287,13 +323,19 @@ export default {
   transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background-color: #c8995d;
+  background-color: var(--accent-color);
 }
 
 /* Grid styles */
-.advantages-grid, .features-grid, .benefits-grid, .reviews-grid {
+.advantages-grid, .technical-advantages .advantages-grid, .reviews-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.features-grid, .benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
 }
 
@@ -699,6 +741,7 @@ export default {
   }
   
   .advantages-grid,
+  .technical-advantages .advantages-grid,
   .features-grid,
   .benefits-grid,
   .reviews-grid {
