@@ -77,7 +77,7 @@ export default {
             '机台事件记录与管理',
             '支持本地或云端部署'
           ],
-          image: 'https://web-1306069918.cos.ap-guangzhou.myqcloud.com/isemes/images/%E7%9B%91%E6%8E%A7.png'
+          image: '/images/101-监控.jpg'
         },
         {
           id: 2,
@@ -93,7 +93,7 @@ export default {
             '扫码应用系统支持',
             'AI智能质检系统集成'
           ],
-          image: 'https://web-1306069918.cos.ap-guangzhou.myqcloud.com/isemes/images/%E7%94%9F%E4%BA%A7.png'
+          image: '/images/102-生产.jpg'
         },
         {
           id: 3,
@@ -109,7 +109,7 @@ export default {
             '库存盘点与调整',
             '原料成本核算与分析'
           ],
-          image: 'https://web-1306069918.cos.ap-guangzhou.myqcloud.com/isemes/images/%E5%BA%93%E5%AD%98.png'
+          image: '/images/104-库存.jpg'
         },
         {
           id: 4,
@@ -125,7 +125,7 @@ export default {
             '设备利用率分析',
             '换布记录与统计'
           ],
-          image: 'https://web-1306069918.cos.ap-guangzhou.myqcloud.com/isemes/images/%E5%B7%A5%E8%B5%84.png'
+          image: '/images/103-工资.jpg'
         }
       ]
     }
