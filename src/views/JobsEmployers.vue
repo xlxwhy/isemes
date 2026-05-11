@@ -16,7 +16,7 @@
           </div>
           <div class="jobs-actions">
             <button class="btn btn-primary">发布新职位</button>
-          </article>
+          </div>
         </div>
 
         <div class="job-cards">
