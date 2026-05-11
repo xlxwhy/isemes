@@ -1,45 +1,5 @@
 <template>
   <main class="services">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "针织织厂智能管理系统支持哪些部署方式？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "系统支持本地服务器部署和云端部署两种方式。本地部署适合对数据安全有严格要求的企业，云端部署则更加灵活便捷，可根据企业规模和需求选择。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "AI智能质检的识别精度如何？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "我们的AI智能质检系统采用先进的AI算法，适应所有国产及进口品牌的单面机型，识别精度高达98%以上，漏检率低至2%以下，可有效降低废布损失80%以上。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "系统是否支持定制化开发？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "是的，我们提供全面的功能模块定制开发服务，包括特定的报表格式、数据采集方式、工资计算规则等，可根据企业需求快速定制。"
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "工资统计系统支持哪些计算方式？",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "系统支持多种工资计算方式，可根据机台采集的数据自动计算工人工资，生成详细的工资报表，包括生产产量、工时、工资等信息。"
-          }
-        }
-      ]
-    }
-    </script>
     <Breadcrumb :breadcrumbs="[
       { text: '服务支持' }
     ]" />
@@ -120,6 +80,66 @@ export default {
           detail: '提供本地服务器部署或云端部署两种方式，可根据企业规模和需求选择。支持功能模块的定制开发，包括特定的报表格式、数据采集方式、工资计算规则等。'
         }
       ]
+    }
+  },
+  mounted() {
+    this.injectStructuredData()
+  },
+  beforeUnmount() {
+    this.removeStructuredData()
+  },
+  methods: {
+    injectStructuredData() {
+      const structuredData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "针织织厂智能管理系统支持哪些部署方式？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "系统支持本地服务器部署和云端部署两种方式。本地部署适合对数据安全有严格要求的企业，云端部署则更加灵活便捷，可根据企业规模和需求选择。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "AI智能质检的识别精度如何？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "我们的AI智能质检系统采用先进的AI算法，适应所有国产及进口品牌的单面机型，识别精度高达98%以上，漏检率低至2%以下，可有效降低废布损失80%以上。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "系统是否支持定制化开发？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "是的，我们提供全面的功能模块定制开发服务，包括特定的报表格式、数据采集方式、工资计算规则等，可根据企业需求快速定制。"
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "工资统计系统支持哪些计算方式？",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "系统支持多种工资计算方式，可根据机台采集的数据自动计算工人工资，生成详细的工资报表，包括生产产量、工时、工资等信息。"
+            }
+          }
+        ]
+      }
+
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'
+      script.id = 'structured-data-services'
+      script.textContent = JSON.stringify(structuredData)
+      document.head.appendChild(script)
+      this.structuredDataScript = script
+    },
+    removeStructuredData() {
+      if (this.structuredDataScript && this.structuredDataScript.parentNode) {
+        this.structuredDataScript.parentNode.removeChild(this.structuredDataScript)
+      }
     }
   }
 }

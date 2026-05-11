@@ -1,82 +1,5 @@
 <template>
   <div class="home">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "广州三思智联技术有限公司",
-      "alternateName": "三思智联",
-      "url": "https://www.isemes.com",
-      "logo": "https://www.isemes.com/favicon.svg",
-      "description": "专注于针织织厂智能化管理解决方案，提供AI智能质检、生产全流程管理、实时数据监控等数字化转型服务",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "天河区长湴白沙水路85号27房号",
-        "addressLocality": "广州市",
-        "addressRegion": "广东省",
-        "postalCode": "510000",
-        "addressCountry": "CN"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+86-13763317850",
-        "contactType": "customer service",
-        "availableLanguage": ["Chinese"]
-      },
-      "email": "public@isemes.com",
-      "sameAs": [],
-      "foundingDate": "2020",
-      "areaServed": "CN",
-      "knowsAbout": ["针织织厂管理", "AI智能质检", "纺织行业数字化转型", "生产管理系统"]
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "三思智联",
-      "url": "https://www.isemes.com",
-      "description": "针织织厂智能管理系统",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://www.isemes.com/search?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "针织织厂智能管理系统",
-      "applicationCategory": "BusinessApplication",
-      "operatingSystem": "Web",
-      "description": "专注于纺织行业数字化转型的专业方案商，提供AI智能质检、生产全流程管理、实时数据监控",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "CNY",
-        "description": "联系获取报价"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.8",
-        "ratingCount": "128"
-      },
-      "featureList": [
-        "AI智能质检",
-        "生产全流程管理",
-        "实时数据监控",
-        "织机监控系统",
-        "原料管理系统",
-        "坯布管理系统",
-        "订单管理系统",
-        "生产工资系统",
-        "工厂报表系统",
-        "扫码应用系统"
-      ]
-    }
-    </script>
     <!-- Hero Section -->
     <header class="hero">
       <div class="hero-background">
@@ -87,8 +10,8 @@
           <h1>针织织厂智能管理系统</h1>
           <p>广州三思智联技术有限公司 - 专注于纺织行业数字化转型的专业方案商</p>
           <nav class="hero-actions">
-            <a href="/products" class="btn btn-primary">了解产品</a>
-            <a href="/services" class="btn btn-secondary">查看服务</a>
+            <router-link to="/products" class="btn btn-primary">了解产品</router-link>
+            <router-link to="/services" class="btn btn-secondary">查看服务</router-link>
           </nav>
         </div>
       </div>
@@ -262,6 +185,108 @@ export default {
         "山东某纺织公司运营经理",
         "湖南某针织厂技术主管"
       ]
+    }
+  },
+  mounted() {
+    this.injectStructuredData()
+  },
+  beforeUnmount() {
+    this.removeStructuredData()
+  },
+  methods: {
+    injectStructuredData() {
+      const structuredData = [
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "广州三思智联技术有限公司",
+          "alternateName": "三思智联",
+          "url": "https://www.isemes.com",
+          "logo": "https://www.isemes.com/favicon.svg",
+          "description": "专注于针织织厂智能化管理解决方案，提供AI智能质检、生产全流程管理、实时数据监控等数字化转型服务",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "天河区长湴白沙水路85号27房号",
+            "addressLocality": "广州市",
+            "addressRegion": "广东省",
+            "postalCode": "510000",
+            "addressCountry": "CN"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+86-13763317850",
+            "contactType": "customer service",
+            "availableLanguage": ["Chinese"]
+          },
+          "email": "public@isemes.com",
+          "sameAs": [],
+          "foundingDate": "2020",
+          "areaServed": "CN",
+          "knowsAbout": ["针织织厂管理", "AI智能质检", "纺织行业数字化转型", "生产管理系统"]
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "三思智联",
+          "url": "https://www.isemes.com",
+          "description": "针织织厂智能管理系统",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.isemes.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          "name": "针织织厂智能管理系统",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "description": "专注于纺织行业数字化转型的专业方案商，提供AI智能质检、生产全流程管理、实时数据监控",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY",
+            "description": "联系获取报价"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "128"
+          },
+          "featureList": [
+            "AI智能质检",
+            "生产全流程管理",
+            "实时数据监控",
+            "织机监控系统",
+            "原料管理系统",
+            "坯布管理系统",
+            "订单管理系统",
+            "生产工资系统",
+            "工厂报表系统",
+            "扫码应用系统"
+          ]
+        }
+      ]
+
+      this.structuredDataScripts = []
+      structuredData.forEach((data, index) => {
+        const script = document.createElement('script')
+        script.type = 'application/ld+json'
+        script.id = `structured-data-home-${index}`
+        script.textContent = JSON.stringify(data)
+        document.head.appendChild(script)
+        this.structuredDataScripts.push(script)
+      })
+    },
+    removeStructuredData() {
+      if (this.structuredDataScripts) {
+        this.structuredDataScripts.forEach(script => {
+          if (script.parentNode) {
+            script.parentNode.removeChild(script)
+          }
+        })
+      }
     }
   }
 }

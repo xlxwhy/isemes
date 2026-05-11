@@ -38,10 +38,10 @@
               <span class="icon">📍</span>
               <span>广州市天河区长湴白沙水路85号27房号</span>
             </div>
-            <div class="contact-item">
+            <!-- <div class="contact-item">
               <span class="icon">📞</span>
-              <!-- <span>+86 13763317850</span> -->
-            </div>
+              <span>+86 13763317850</span>
+            </div> -->
             <div class="contact-item">
               <span class="icon">✉️</span>
               <span>public@isemes.com</span>

@@ -13,14 +13,14 @@
         <router-link to="/" class="logo-text">三思智联</router-link>
       </div>
       <div class="nav-links" :class="{ 'nav-links-open': menuOpen }">
-        <router-link to="/" class="nav-link" @click="menuOpen = false; scrollToTop()">首页</router-link>
-        <router-link to="/about" class="nav-link" @click="menuOpen = false; scrollToTop()">关于我们</router-link>
-        <router-link to="/products" class="nav-link" @click="menuOpen = false; scrollToTop()">产品</router-link>
-        <router-link to="/services" class="nav-link" @click="menuOpen = false; scrollToTop()">服务</router-link>
-        <!-- <router-link to="/jobs" class="nav-link" @click="menuOpen = false; scrollToTop()">招聘广场</router-link> -->
-        <router-link to="/contact" class="nav-link" @click="menuOpen = false; scrollToTop()">联系我们</router-link>
+        <router-link to="/" class="nav-link" @click="menuOpen = false">首页</router-link>
+        <router-link to="/about" class="nav-link" @click="menuOpen = false">关于我们</router-link>
+        <router-link to="/products" class="nav-link" @click="menuOpen = false">产品</router-link>
+        <router-link to="/services" class="nav-link" @click="menuOpen = false">服务</router-link>
+        <!-- <router-link to="/jobs" class="nav-link" @click="menuOpen = false">招聘广场</router-link> -->
+        <router-link to="/contact" class="nav-link" @click="menuOpen = false">联系我们</router-link>
       </div>
-      <button class="menu-toggle" @click="menuOpen = !menuOpen; if (!menuOpen) scrollToTop()" :class="{ 'menu-toggle-open': menuOpen }">
+      <button class="menu-toggle" @click="menuOpen = !menuOpen" :class="{ 'menu-toggle-open': menuOpen }">
         <span></span>
         <span></span>
         <span></span>
@@ -53,12 +53,6 @@ export default {
   methods: {
     handleScroll() {
       this.scrolled = window.scrollY > 50
-    },
-    scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      })
     }
   }
 }
