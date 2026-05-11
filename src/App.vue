@@ -8,7 +8,11 @@ import BackToTop from './components/BackToTop.vue'
   <div id="app">
     <Navbar />
     <main>
-      <router-view />
+      <router-view v-slot="{ Component }">
+        <transition name="fade" mode="out-in">
+          <component :is="Component" />
+        </transition>
+      </router-view>
     </main>
     <Footer />
     <BackToTop />
@@ -36,5 +40,16 @@ main {
 /* Add padding when navbar is fixed */
 .navbar-scrolled + main {
   padding-top: 90px; /* Adjust based on navbar height */
+}
+
+/* Page transition */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.15s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
