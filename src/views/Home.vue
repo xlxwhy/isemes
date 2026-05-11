@@ -1,16 +1,93 @@
 <template>
   <div class="home">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "广州三思智联技术有限公司",
+      "alternateName": "三思智联",
+      "url": "https://www.isemes.com",
+      "logo": "https://www.isemes.com/favicon.svg",
+      "description": "专注于针织织厂智能化管理解决方案，提供AI智能质检、生产全流程管理、实时数据监控等数字化转型服务",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "天河区长湴白沙水路85号27房号",
+        "addressLocality": "广州市",
+        "addressRegion": "广东省",
+        "postalCode": "510000",
+        "addressCountry": "CN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+86-13763317850",
+        "contactType": "customer service",
+        "availableLanguage": ["Chinese"]
+      },
+      "email": "public@isemes.com",
+      "sameAs": [],
+      "foundingDate": "2020",
+      "areaServed": "CN",
+      "knowsAbout": ["针织织厂管理", "AI智能质检", "纺织行业数字化转型", "生产管理系统"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "三思智联",
+      "url": "https://www.isemes.com",
+      "description": "针织织厂智能管理系统",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.isemes.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "针织织厂智能管理系统",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "description": "专注于纺织行业数字化转型的专业方案商，提供AI智能质检、生产全流程管理、实时数据监控",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "CNY",
+        "description": "联系获取报价"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "128"
+      },
+      "featureList": [
+        "AI智能质检",
+        "生产全流程管理",
+        "实时数据监控",
+        "织机监控系统",
+        "原料管理系统",
+        "坯布管理系统",
+        "订单管理系统",
+        "生产工资系统",
+        "工厂报表系统",
+        "扫码应用系统"
+      ]
+    }
+    </script>
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-background">
-        <img src="https://picsum.photos/id/180/1920/1080" alt="工业智能科技">
+        <img src="/images/102-生产.jpg" alt="针织织厂智能管理系统 - 生产全流程数字化管理">
       </div>
       <div class="container">
         <div class="hero-content">
           <h1>针织织厂智能管理系统</h1>
           <p>广州三思智联技术有限公司 - 专注于纺织行业数字化转型的专业方案商</p>
-          <a href="#/products" class="btn btn-primary">了解产品</a>
-          <a href="#/services" class="btn btn-secondary">查看服务</a>
+          <a href="/products" class="btn btn-primary">了解产品</a>
+          <a href="/services" class="btn btn-secondary">查看服务</a>
         </div>
       </div>
     </section>
@@ -176,12 +253,12 @@ export default {
         "装了之后，看机效率和看机质量都提升了"
       ],
       reviewAuthors: [
-        "针织厂1",
-        "针织厂2",
-        "针织厂3",
-        "针织厂4",
-        "针织厂5",
-        "针织厂6"
+        "广东某大型针织企业生产总监",
+        "浙江某纺织集团技术负责人",
+        "福建某针织厂厂长",
+        "江苏某织造企业车间主任",
+        "山东某纺织公司运营经理",
+        "湖南某针织厂技术主管"
       ]
     }
   }

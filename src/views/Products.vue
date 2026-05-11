@@ -17,7 +17,7 @@
         >
           <div class="product-image">
             <div class="image-wrapper" @click="openImagePreview(product.image)">
-              <img :src="product.image" :alt="product.name" class="clickable-image">
+              <img :src="product.image" :alt="product.name" class="clickable-image" loading="lazy">
               <div class="image-overlay">
                 <span class="zoom-icon">🔍</span>
               </div>

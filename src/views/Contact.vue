@@ -41,13 +41,13 @@
               <p>广州市天河区长湴白沙水路85号27房号</p>
             </div>
           </div>
-          <div class="info-item">
+          <!-- <div class="info-item">
             <div class="info-icon phone-icon"></div>
             <div>
               <h3>电话</h3>
-              <!-- <p>+86 13763317850</p> -->
+              <p>+86 13763317850</p>
             </div>
-          </div>
+          </div> -->
           <div class="info-item">
             <div class="info-icon email-icon"></div>
             <div>

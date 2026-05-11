@@ -55,7 +55,7 @@
               <div class="wechat-content">
                 <span>微信咨询</span>
                 <div class="wechat-qr">
-                  <img src="../assets/images/contact.png" alt="微信二维码">
+                  <img src="../assets/images/contact.png" alt="三思智联微信二维码" loading="lazy">
                 </div>
               </div>
             </div>
