@@ -40,7 +40,7 @@
             </div>
             <div class="contact-item">
               <span class="icon">📞</span>
-              <span>+86 13763317850</span>
+              <!-- <span>+86 13763317850</span> -->
             </div>
             <div class="contact-item">
               <span class="icon">✉️</span>

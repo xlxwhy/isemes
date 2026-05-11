@@ -17,7 +17,7 @@
         <router-link to="/about" class="nav-link" @click="menuOpen = false; scrollToTop()">关于我们</router-link>
         <router-link to="/products" class="nav-link" @click="menuOpen = false; scrollToTop()">产品</router-link>
         <router-link to="/services" class="nav-link" @click="menuOpen = false; scrollToTop()">服务</router-link>
-        <router-link to="/jobs" class="nav-link" @click="menuOpen = false; scrollToTop()">招聘广场</router-link>
+        <!-- <router-link to="/jobs" class="nav-link" @click="menuOpen = false; scrollToTop()">招聘广场</router-link> -->
         <router-link to="/contact" class="nav-link" @click="menuOpen = false; scrollToTop()">联系我们</router-link>
       </div>
       <button class="menu-toggle" @click="menuOpen = !menuOpen; if (!menuOpen) scrollToTop()" :class="{ 'menu-toggle-open': menuOpen }">
