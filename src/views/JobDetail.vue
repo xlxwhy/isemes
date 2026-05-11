@@ -88,8 +88,8 @@
               <div class="application-content">
                 <p>有意者请将个人简历发送至：<a href="mailto:hr@example.com">hr@example.com</a></p>
                 <p>邮件主题请注明：{{ jobDetail.title }} - 姓名</p>
-                <p>联系电话：13763317850</p>
                 <p>联系人：人力资源部</p>
+                <p class="contact-note">（为保护隐私，联系方式将在您申请职位后显示）</p>
               </div>
             </div>
           </div>
@@ -134,10 +134,6 @@
             <div class="sidebar-card">
               <h3>联系方式</h3>
               <div class="contact-info">
-                <div class="contact-item">
-                  <span class="contact-icon">📞</span>
-                  <span>13763317850</span>
-                </div>
                 <div class="contact-item">
                   <span class="contact-icon">📧</span>
                   <a href="mailto:hr@example.com">hr@example.com</a>
@@ -536,6 +532,13 @@ export default {
 .requirements-content li,
 .benefits-content li {
   margin-bottom: 10px;
+}
+
+.application-content .contact-note {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 10px;
 }
 
 .application-content a {

@@ -78,162 +78,164 @@
     }
     </script>
     <!-- Hero Section -->
-    <section class="hero">
+    <header class="hero">
       <div class="hero-background">
-        <img src="/images/102-生产.jpg" alt="针织织厂智能管理系统 - 生产全流程数字化管理">
+        <img src="/images/home.jpg" alt="针织织厂智能管理系统 - 生产全流程数字化管理" width="1920" height="1080">
       </div>
       <div class="container">
         <div class="hero-content">
           <h1>针织织厂智能管理系统</h1>
           <p>广州三思智联技术有限公司 - 专注于纺织行业数字化转型的专业方案商</p>
-          <a href="/products" class="btn btn-primary">了解产品</a>
-          <a href="/services" class="btn btn-secondary">查看服务</a>
+          <nav class="hero-actions">
+            <a href="/products" class="btn btn-primary">了解产品</a>
+            <a href="/services" class="btn btn-secondary">查看服务</a>
+          </nav>
         </div>
       </div>
-    </section>
+    </header>
 
     <!-- Product Advantages Section -->
-    <section class="product-advantages">
+    <section class="product-advantages" aria-labelledby="advantages-heading">
       <div class="container">
-        <h2>核心优势</h2>
+        <h2 id="advantages-heading">核心优势</h2>
         <div class="advantages-grid">
-          <div class="advantage-item">
+          <article class="advantage-item">
             <div class="advantage-icon ai-icon"></div>
             <h3>AI智能质检</h3>
             <p>7*24小时不间断疵点检测，实时停机告警，漏检率不超2%，过检率不超20%，有效降低废布损失80%以上</p>
-          </div>
-          <div class="advantage-item">
+          </article>
+          <article class="advantage-item">
             <div class="advantage-icon workflow-icon"></div>
             <h3>生产全流程管理</h3>
             <p>覆盖客户资料、原料进仓、生产订单、坯布进出仓的完整生产管理流程，实现数字化、智能化管理</p>
-          </div>
-          <div class="advantage-item">
+          </article>
+          <article class="advantage-item">
             <div class="advantage-icon monitor-icon"></div>
             <h3>实时数据监控</h3>
             <p>机台状态、生产进度、库存状态、质量检测实时监控，云端日报随时查看，生产情况一目了然</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Product Features Section -->
-    <section class="product-features">
+    <section class="product-features" aria-labelledby="features-heading">
       <div class="container">
-        <h2>核心功能模块</h2>
+        <h2 id="features-heading">核心功能模块</h2>
         <div class="features-grid">
-          <div class="feature-item">
+          <article class="feature-item">
             <h3>织机监控系统</h3>
             <p>实时监控机台运行状态、产量数据、效率指标，支持数据看板和监控大屏展示，及时掌握生产情况</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>工厂基础设置</h3>
             <p>工厂管理、车间管理、设备组管理、机型管理、机台管理、班级管理、员工管理等基础数据维护</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>快捷生产管理</h3>
             <p>客户资料管理、原料进仓、生产订单创建、坯布出仓等快速生产流程操作</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>原料管理系统</h3>
             <p>原材料管理、原料绑定、原料进仓、原料退料、原料领用、原料库存、原料流水全程跟踪</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>坯布管理系统</h3>
             <p>坯布出仓、进仓查询、库存管理、坯色疵点记录、仓库信息管理等全流程管理</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>订单管理系统</h3>
             <p>生产订单创建、订单查询、订单排产、排产记录等订单全生命周期管理</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>生产工资系统</h3>
             <p>工资方案设置、日工资计算、月工资统计、工资明细查询，支持多种工资计算方式</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>工厂报表系统</h3>
             <p>运行记录、生产记录、圈数统计、产量报表、工资查询、换布记录等多维度报表分析</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <h3>扫码应用系统</h3>
             <p>支持按布种出仓、按机台出仓、取消出仓、手动进仓、库存盘点、库存查询等移动端操作</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Technical Advantages Section -->
-    <section class="technical-advantages">
+    <section class="technical-advantages" aria-labelledby="tech-heading">
       <div class="container">
-        <h2>技术优势</h2>
+        <h2 id="tech-heading">技术优势</h2>
         <div class="advantages-grid">
-          <div class="advantage-item">
+          <article class="advantage-item">
             <h3>高精度AI识别</h3>
             <p>采用先进的AI算法，适应所有国产及进口品牌的单面机型，识别精度高达98%以上，漏检率低至2%以下</p>
-          </div>
-          <div class="advantage-item">
+          </article>
+          <article class="advantage-item">
             <h3>灵活部署方案</h3>
             <p>支持本地服务器部署或云端部署，安装快捷简便，位置灵活，维护轻松简单，满足不同企业的需求</p>
-          </div>
-          <div class="advantage-item">
+          </article>
+          <article class="advantage-item">
             <h3>端云一体化架构</h3>
             <p>采用时空联合定位算法，响应速度快，维护成本低，检测效率高，实现云端数据同步与分析</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Customer Benefits Section -->
-    <section class="customer-benefits">
+    <section class="customer-benefits" aria-labelledby="benefits-heading">
       <div class="container">
-        <h2>为您带来的效益</h2>
+        <h2 id="benefits-heading">为您带来的效益</h2>
         <div class="benefits-grid">
-          <div class="benefit-item">
+          <article class="benefit-item">
             <div class="benefit-icon waste-reduction-icon"></div>
             <h3>废布损失大幅降低</h3>
             <p>AI智能质检实时发现疵点，废布经济损失降低80%以上，每年可为企业节省大量成本</p>
-          </div>
-          <div class="benefit-item">
+          </article>
+          <article class="benefit-item">
             <div class="benefit-icon efficiency-icon"></div>
             <h3>生产效率显著提升</h3>
             <p>工人看管机台数量从4台增加到6台，工作效率提升50%，同时工作积极性显著提高</p>
-          </div>
-          <div class="benefit-item">
+          </article>
+          <article class="benefit-item">
             <div class="benefit-icon order-growth-icon"></div>
             <h3>产品质量与订单量提升</h3>
             <p>布匹品质得到保障，客户满意度提高，订单量显著增加，企业竞争力增强</p>
-          </div>
-          <div class="benefit-item">
+          </article>
+          <article class="benefit-item">
             <div class="benefit-icon workflow-icon"></div>
             <h3>管理效率提升</h3>
             <p>自动化数据采集与报表生成，减少人工统计工作量，管理决策更加精准高效</p>
-          </div>
-          <div class="benefit-item">
+          </article>
+          <article class="benefit-item">
             <div class="benefit-icon monitor-icon"></div>
             <h3>实时掌握生产情况</h3>
             <p>随时随地查看生产数据，及时发现和解决问题，生产管理更加灵活便捷</p>
-          </div>
-          <div class="benefit-item">
+          </article>
+          <article class="benefit-item">
             <div class="benefit-icon ai-icon"></div>
             <h3>技术升级与创新</h3>
             <p>引入AI技术，实现数字化转型，提升企业技术水平和市场竞争力</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
     <!-- Customer Reviews Section -->
-    <section class="customer-reviews">
+    <section class="customer-reviews" aria-labelledby="reviews-heading">
       <div class="container">
-        <h2>客户评价</h2>
+        <h2 id="reviews-heading">客户评价</h2>
         <div class="reviews-grid">
-          <div class="review-item" v-for="(review, index) in reviews" :key="index">
-            <div class="review-content">
+          <article class="review-item" v-for="(review, index) in reviews" :key="index">
+            <blockquote class="review-content">
               <p>{{ review }}</p>
-            </div>
-            <div class="review-author">
-              <span>{{ reviewAuthors[index] }}</span>
-            </div>
-          </div>
+            </blockquote>
+            <footer class="review-author">
+              <cite>{{ reviewAuthors[index] }}</cite>
+            </footer>
+          </article>
         </div>
       </div>
     </section>

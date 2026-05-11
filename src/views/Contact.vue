@@ -1,15 +1,18 @@
 <template>
-  <div class="contact">
-    <section class="contact-hero">
+  <main class="contact">
+    <Breadcrumb :breadcrumbs="[
+      { text: '联系我们' }
+    ]" />
+    <header class="contact-hero">
       <div class="container">
         <h1>联系我们</h1>
         <p class="hero-subtitle">如有任何疑问或需求，欢迎随时与我们联系</p>
       </div>
-    </section>
+    </header>
 
     <section class="contact-content">
       <div class="container">
-        <div class="contact-form">
+        <article class="contact-form">
           <h2>发送消息</h2>
           <form @submit.prevent="submitForm">
             <div class="form-group">
@@ -30,9 +33,9 @@
             </div>
             <button type="submit" class="btn btn-primary">发送消息</button>
           </form>
-        </div>
+        </article>
 
-        <div class="contact-info">
+        <aside class="contact-info">
           <h2>联系方式</h2>
           <div class="info-item">
             <div class="info-icon location-icon"></div>
@@ -41,13 +44,6 @@
               <p>广州市天河区长湴白沙水路85号27房号</p>
             </div>
           </div>
-          <!-- <div class="info-item">
-            <div class="info-icon phone-icon"></div>
-            <div>
-              <h3>电话</h3>
-              <p>+86 13763317850</p>
-            </div>
-          </div> -->
           <div class="info-item">
             <div class="info-icon email-icon"></div>
             <div>
@@ -62,14 +58,20 @@
               <p>周一至周五: 9:00 - 18:00</p>
             </div>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
+import Breadcrumb from '@/components/Breadcrumb.vue'
+
 export default {
+  name: 'Contact',
+  components: {
+    Breadcrumb
+  },
   data() {
     return {
       form: {

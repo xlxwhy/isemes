@@ -1,38 +1,44 @@
 <template>
-  <div class="jobs-employees">
-    <section class="jobs-hero">
+  <main class="jobs-employees">
+    <Breadcrumb :breadcrumbs="[
+      { text: '招聘广场', to: '/jobs' },
+      { text: '员工求职平台' }
+    ]" />
+    <header class="jobs-hero">
       <div class="container">
         <h1>员工求职平台</h1>
         <p class="hero-subtitle">找到您理想的针织行业工作机会</p>
       </div>
-    </section>
+    </header>
 
-    <section class="jobs-list">
+    <section class="jobs-list" aria-labelledby="jobs-heading">
       <div class="container">
         <div class="jobs-header">
           <div class="jobs-title">
-            <h2>热门职位推荐</h2>
+            <h2 id="jobs-heading">热门职位推荐</h2>
             <p class="jobs-count">共 {{ jobList.length }} 个招聘职位</p>
           </div>
           <div class="jobs-search">
             <input 
-              type="text" 
+              type="search" 
               placeholder="搜索职位或公司..." 
               class="search-input"
               v-model="searchKeyword"
+              aria-label="搜索职位"
             >
-            <button class="search-btn">🔍</button>
+            <button class="search-btn" aria-label="搜索">🔍</button>
           </div>
         </div>
 
-        <div class="job-filters">
-          <div class="filter-group">
-            <label>工作类型：</label>
+        <div class="job-filters" role="search">
+          <fieldset class="filter-group">
+            <legend>工作类型：</legend>
             <div class="filter-options">
               <button 
                 class="filter-btn" 
                 :class="{ active: selectedType === 'all' }"
                 @click="selectedType = 'all'"
+                aria-pressed="selectedType === 'all'"
               >
                 全部
               </button>
@@ -40,6 +46,7 @@
                 class="filter-btn" 
                 :class="{ active: selectedType === '全职' }"
                 @click="selectedType = '全职'"
+                aria-pressed="selectedType === '全职'"
               >
                 全职
               </button>
@@ -47,6 +54,7 @@
                 class="filter-btn" 
                 :class="{ active: selectedType === '兼职' }"
                 @click="selectedType = '兼职'"
+                aria-pressed="selectedType === '兼职'"
               >
                 兼职
               </button>
@@ -54,18 +62,20 @@
                 class="filter-btn" 
                 :class="{ active: selectedType === '实习' }"
                 @click="selectedType = '实习'"
+                aria-pressed="selectedType === '实习'"
               >
                 实习
               </button>
             </div>
-          </div>
-          <div class="filter-group">
-            <label>薪资范围：</label>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend>薪资范围：</legend>
             <div class="filter-options">
               <button 
                 class="filter-btn" 
                 :class="{ active: selectedSalary === 'all' }"
                 @click="selectedSalary = 'all'"
+                aria-pressed="selectedSalary === 'all'"
               >
                 全部
               </button>
@@ -73,6 +83,7 @@
                 class="filter-btn" 
                 :class="{ active: selectedSalary === '5k以下' }"
                 @click="selectedSalary = '5k以下'"
+                aria-pressed="selectedSalary === '5k以下'"
               >
                 5k以下
               </button>
@@ -80,6 +91,7 @@
                 class="filter-btn" 
                 :class="{ active: selectedSalary === '5k-10k' }"
                 @click="selectedSalary = '5k-10k'"
+                aria-pressed="selectedSalary === '5k-10k'"
               >
                 5k-10k
               </button>
@@ -87,6 +99,7 @@
                 class="filter-btn" 
                 :class="{ active: selectedSalary === '10k-15k' }"
                 @click="selectedSalary = '10k-15k'"
+                aria-pressed="selectedSalary === '10k-15k'"
               >
                 10k-15k
               </button>
@@ -94,30 +107,31 @@
                 class="filter-btn" 
                 :class="{ active: selectedSalary === '15k以上' }"
                 @click="selectedSalary = '15k以上'"
+                aria-pressed="selectedSalary === '15k以上'"
               >
                 15k以上
               </button>
             </div>
-          </div>
+          </fieldset>
         </div>
 
         <div class="job-cards">
-          <div 
+          <article 
             class="job-card" 
             v-for="job in filteredJobs" 
             :key="job.id"
             @click="goToJobDetail(job.id)"
           >
-            <div class="job-header">
+            <header class="job-header">
               <div class="job-company">
-                <div class="company-logo">{{ job.companyLogo }}</div>
+                <div class="company-logo" aria-hidden="true">{{ job.companyLogo }}</div>
                 <div class="company-info">
                   <h3 class="company-name">{{ job.companyName }}</h3>
                   <p class="company-location">{{ job.location }}</p>
                 </div>
               </div>
               <div class="job-salary">{{ job.salary }}</div>
-            </div>
+            </header>
             <div class="job-content">
               <h4 class="job-title">{{ job.title }}</h4>
               <p class="job-description">{{ job.description }}</p>
@@ -127,18 +141,18 @@
                 <span class="tag">{{ job.education }}</span>
               </div>
             </div>
-            <div class="job-footer">
-              <div class="job-date">发布于 {{ job.postDate }}</div>
+            <footer class="job-footer">
+              <time class="job-date" :datetime="job.postDate">发布于 {{ job.postDate }}</time>
               <button class="apply-btn">立即申请</button>
-            </div>
-          </div>
+            </footer>
+          </article>
         </div>
 
         <div v-if="filteredJobs.length === 0" class="no-results">
           <p>没有找到符合条件的职位</p>
         </div>
 
-        <div class="pagination">
+        <nav class="pagination" aria-label="职位列表分页">
           <button class="page-btn" :disabled="currentPage === 1">上一页</button>
           <button 
             v-for="page in totalPages" 
@@ -146,19 +160,25 @@
             class="page-btn" 
             :class="{ active: currentPage === page }"
             @click="currentPage = page"
+            :aria-current="currentPage === page ? 'page' : null"
           >
             {{ page }}
           </button>
           <button class="page-btn" :disabled="currentPage === totalPages">下一页</button>
-        </div>
+        </nav>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
+import Breadcrumb from '@/components/Breadcrumb.vue'
+
 export default {
   name: 'JobsEmployees',
+  components: {
+    Breadcrumb
+  },
   data() {
     return {
       currentPage: 1,
@@ -179,7 +199,7 @@ export default {
           salary: '8k-12k',
           experience: '3年以上',
           education: '大专以上',
-          postDate: '2024-03-15',
+          postDate: '2026-05-10',
           status: 'active'
         },
         {
@@ -193,7 +213,7 @@ export default {
           salary: '10k-15k',
           experience: '5年以上',
           education: '本科以上',
-          postDate: '2024-03-12',
+          postDate: '2026-05-08',
           status: 'active'
         },
         {
@@ -207,7 +227,7 @@ export default {
           salary: '5k-8k',
           experience: '1年以上',
           education: '高中以上',
-          postDate: '2024-03-10',
+          postDate: '2026-05-06',
           status: 'active'
         },
         {
@@ -221,7 +241,7 @@ export default {
           salary: '9k-13k',
           experience: '4年以上',
           education: '本科以上',
-          postDate: '2024-03-08',
+          postDate: '2026-05-04',
           status: 'active'
         },
         {
@@ -235,7 +255,7 @@ export default {
           salary: '6k-9k',
           experience: '2年以上',
           education: '大专以上',
-          postDate: '2024-03-05',
+          postDate: '2026-05-02',
           status: 'active'
         },
         {
@@ -249,7 +269,7 @@ export default {
           salary: '12k-18k',
           experience: '6年以上',
           education: '本科以上',
-          postDate: '2024-03-03',
+          postDate: '2026-04-28',
           status: 'active'
         },
         {
@@ -263,7 +283,7 @@ export default {
           salary: '10k-14k',
           experience: '3年以上',
           education: '本科以上',
-          postDate: '2024-03-01',
+          postDate: '2026-04-25',
           status: 'active'
         },
         {
@@ -277,7 +297,7 @@ export default {
           salary: '7k-10k',
           experience: '2年以上',
           education: '大专以上',
-          postDate: '2024-02-28',
+          postDate: '2026-04-22',
           status: 'active'
         }
       ]

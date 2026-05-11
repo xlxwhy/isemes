@@ -1,13 +1,16 @@
 <template>
-  <div class="about">
-    <section class="about-hero">
+  <main class="about">
+    <Breadcrumb :breadcrumbs="[
+      { text: '关于我们' }
+    ]" />
+    <header class="about-hero">
       <div class="container">
         <h1>关于我们</h1>
         <p class="hero-subtitle">专注于针织织厂智能化管理解决方案的专业团队</p>
       </div>
-    </section>
+    </header>
 
-    <section class="company-info">
+    <article class="company-info">
       <div class="container">
         <div class="info-content">
           <div class="info-text">
@@ -17,11 +20,11 @@
             <p>我们拥有一支经验丰富的技术团队，致力于将最新的信息技术应用于传统针织行业，提升生产效率和管理水平。我们的解决方案已经在多家针织企业成功应用，为客户带来了显著的经济效益和管理提升。</p>
           </div>
           <div class="info-image">
-            <img src="/images/101-监控.jpg" alt="三思智联 - 机台监控系统">
+            <img src="/images/101-监控.jpg" alt="三思智联 - 机台监控系统" width="600" height="450">
           </div>
         </div>
       </div>
-    </section>
+    </article>
 
     <section class="mission-vision">
       <div class="container">
@@ -35,8 +38,19 @@
         </div>
       </div>
     </section>
-  </div>
+  </main>
 </template>
+
+<script>
+import Breadcrumb from '@/components/Breadcrumb.vue'
+
+export default {
+  name: 'About',
+  components: {
+    Breadcrumb
+  }
+}
+</script>
 
 <style scoped>
 .about-hero {

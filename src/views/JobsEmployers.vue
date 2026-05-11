@@ -16,13 +16,13 @@
           </div>
           <div class="jobs-actions">
             <button class="btn btn-primary">发布新职位</button>
-          </div>
+          </article>
         </div>
 
         <div class="job-cards">
-          <div 
+          <article 
             class="job-card" 
-            v-for="job in jobList" 
+            v-for="job in paginatedJobs" 
             :key="job.id"
             @click="goToJobDetail(job.id)"
           >
@@ -49,7 +49,7 @@
               <div class="job-date">发布于 {{ job.postDate }}</div>
               <div class="job-status" :class="job.status">{{ job.statusText }}</div>
             </div>
-          </div>
+          </article>
         </div>
 
         <div class="pagination">
@@ -90,7 +90,7 @@ export default {
           salary: '8k-12k',
           experience: '3年以上',
           education: '大专以上',
-          postDate: '2024-03-15',
+          postDate: '2026-05-10',
           status: 'active',
           statusText: '招聘中'
         },
@@ -105,7 +105,7 @@ export default {
           salary: '10k-15k',
           experience: '5年以上',
           education: '本科以上',
-          postDate: '2024-03-12',
+          postDate: '2026-05-08',
           status: 'active',
           statusText: '招聘中'
         },
@@ -120,7 +120,7 @@ export default {
           salary: '5k-8k',
           experience: '1年以上',
           education: '高中以上',
-          postDate: '2024-03-10',
+          postDate: '2026-05-06',
           status: 'pending',
           statusText: '审核中'
         },
@@ -135,7 +135,7 @@ export default {
           salary: '9k-13k',
           experience: '4年以上',
           education: '本科以上',
-          postDate: '2024-03-08',
+          postDate: '2026-05-04',
           status: 'active',
           statusText: '招聘中'
         },
@@ -150,7 +150,7 @@ export default {
           salary: '6k-9k',
           experience: '2年以上',
           education: '大专以上',
-          postDate: '2024-03-05',
+          postDate: '2026-05-02',
           status: 'active',
           statusText: '招聘中'
         },
@@ -165,7 +165,7 @@ export default {
           salary: '12k-18k',
           experience: '6年以上',
           education: '本科以上',
-          postDate: '2024-03-03',
+          postDate: '2026-04-28',
           status: 'closed',
           statusText: '已关闭'
         }

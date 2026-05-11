@@ -90,6 +90,15 @@ const routes = [
       description: '查看三思智联最新职位详情，了解岗位要求和福利待遇。',
       keywords: '职位详情,岗位要求,福利待遇'
     }
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('../views/NotFound.vue'),
+    meta: {
+      title: '404 - 页面未找到',
+      description: '抱歉，您访问的页面不存在。广州三思智联技术有限公司专注于针织织厂智能化管理解决方案。'
+    }
   }
 ]
 
@@ -110,6 +119,7 @@ router.beforeEach((to, from, next) => {
   const defaultDescription = '广州三思智联技术有限公司专注于针织织厂智能化管理解决方案，提供AI智能质检、生产全流程管理、实时数据监控等数字化转型服务。'
   const defaultKeywords = '针织织厂,智能管理系统,AI质检,纺织行业,数字化转型,生产管理'
   const baseUrl = 'https://www.isemes.com'
+  const defaultImage = baseUrl + '/images/home.jpg'
 
   document.title = to.meta.title || defaultTitle
 
@@ -146,31 +156,121 @@ router.beforeEach((to, from, next) => {
   let ogUrl = document.querySelector('meta[property="og:url"]')
   if (ogUrl) {
     ogUrl.setAttribute('content', baseUrl + to.path)
+  } else {
+    ogUrl = document.createElement('meta')
+    ogUrl.setAttribute('property', 'og:url')
+    ogUrl.setAttribute('content', baseUrl + to.path)
+    document.head.appendChild(ogUrl)
   }
 
   let ogTitle = document.querySelector('meta[property="og:title"]')
   if (ogTitle) {
     ogTitle.setAttribute('content', to.meta.title || defaultTitle)
+  } else {
+    ogTitle = document.createElement('meta')
+    ogTitle.setAttribute('property', 'og:title')
+    ogTitle.setAttribute('content', to.meta.title || defaultTitle)
+    document.head.appendChild(ogTitle)
   }
 
   let ogDescription = document.querySelector('meta[property="og:description"]')
   if (ogDescription) {
     ogDescription.setAttribute('content', to.meta.description || defaultDescription)
+  } else {
+    ogDescription = document.createElement('meta')
+    ogDescription.setAttribute('property', 'og:description')
+    ogDescription.setAttribute('content', to.meta.description || defaultDescription)
+    document.head.appendChild(ogDescription)
+  }
+
+  let ogType = document.querySelector('meta[property="og:type"]')
+  if (ogType) {
+    ogType.setAttribute('content', 'website')
+  } else {
+    ogType = document.createElement('meta')
+    ogType.setAttribute('property', 'og:type')
+    ogType.setAttribute('content', 'website')
+    document.head.appendChild(ogType)
+  }
+
+  let ogSiteName = document.querySelector('meta[property="og:site_name"]')
+  if (ogSiteName) {
+    ogSiteName.setAttribute('content', '三思智联')
+  } else {
+    ogSiteName = document.createElement('meta')
+    ogSiteName.setAttribute('property', 'og:site_name')
+    ogSiteName.setAttribute('content', '三思智联')
+    document.head.appendChild(ogSiteName)
+  }
+
+  let ogLocale = document.querySelector('meta[property="og:locale"]')
+  if (ogLocale) {
+    ogLocale.setAttribute('content', 'zh_CN')
+  } else {
+    ogLocale = document.createElement('meta')
+    ogLocale.setAttribute('property', 'og:locale')
+    ogLocale.setAttribute('content', 'zh_CN')
+    document.head.appendChild(ogLocale)
+  }
+
+  let ogImage = document.querySelector('meta[property="og:image"]')
+  if (ogImage) {
+    ogImage.setAttribute('content', to.meta.image || defaultImage)
+  } else {
+    ogImage = document.createElement('meta')
+    ogImage.setAttribute('property', 'og:image')
+    ogImage.setAttribute('content', to.meta.image || defaultImage)
+    document.head.appendChild(ogImage)
   }
 
   let twitterUrl = document.querySelector('meta[name="twitter:url"]')
   if (twitterUrl) {
     twitterUrl.setAttribute('content', baseUrl + to.path)
+  } else {
+    twitterUrl = document.createElement('meta')
+    twitterUrl.name = 'twitter:url'
+    twitterUrl.content = baseUrl + to.path
+    document.head.appendChild(twitterUrl)
   }
 
   let twitterTitle = document.querySelector('meta[name="twitter:title"]')
   if (twitterTitle) {
     twitterTitle.setAttribute('content', to.meta.title || defaultTitle)
+  } else {
+    twitterTitle = document.createElement('meta')
+    twitterTitle.name = 'twitter:title'
+    twitterTitle.content = to.meta.title || defaultTitle
+    document.head.appendChild(twitterTitle)
   }
 
   let twitterDescription = document.querySelector('meta[name="twitter:description"]')
   if (twitterDescription) {
     twitterDescription.setAttribute('content', to.meta.description || defaultDescription)
+  } else {
+    twitterDescription = document.createElement('meta')
+    twitterDescription.name = 'twitter:description'
+    twitterDescription.content = to.meta.description || defaultDescription
+    document.head.appendChild(twitterDescription)
+  }
+
+  let twitterCard = document.querySelector('meta[name="twitter:card"]')
+  if (twitterCard) {
+    twitterCard.setAttribute('content', 'summary_large_image')
+  } else {
+    twitterCard = document.createElement('meta')
+    twitterCard.name = 'twitter:card'
+    twitterCard.content = 'summary_large_image'
+    document.head.appendChild(twitterCard)
+  }
+
+  let robots = document.querySelector('meta[name="robots"]')
+  if (robots) {
+    robots.setAttribute('content', 'index, follow')
+  } else {
+    robots = document.createElement('meta')
+    robots.name = 'robots'
+    robots.content = 'index, follow'
+    document.head.appendChild(robots)
   }
 
   next()

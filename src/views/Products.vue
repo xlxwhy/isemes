@@ -1,15 +1,18 @@
 <template>
-  <div class="products">
-    <section class="products-hero">
+  <main class="products">
+    <Breadcrumb :breadcrumbs="[
+      { text: '产品中心' }
+    ]" />
+    <header class="products-hero">
       <div class="container">
         <h1>我们的产品</h1>
         <p class="hero-subtitle">为针织织厂提供智能化、数字化的管理解决方案</p>
       </div>
-    </section>
+    </header>
 
     <section class="products-list">
       <div class="container">
-        <div 
+        <article 
           class="product-card" 
           v-for="product in products" 
           :key="product.id"
@@ -17,7 +20,7 @@
         >
           <div class="product-image">
             <div class="image-wrapper" @click="openImagePreview(product.image)">
-              <img :src="product.image" :alt="product.name" class="clickable-image" loading="lazy">
+              <img :src="product.image" :alt="product.name + ' - 针织织厂智能管理系统'" class="clickable-image" loading="lazy" width="600" height="400">
               <div class="image-overlay">
                 <span class="zoom-icon">🔍</span>
               </div>
@@ -40,9 +43,12 @@
                   </div>
                 </div>
               </div>
+              <div class="product-cta">
+                <router-link to="/contact" class="btn btn-primary">咨询详情</router-link>
+              </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
@@ -53,11 +59,17 @@
         <img :src="previewImage" :alt="'预览图片'" class="preview-image">
       </div>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
+import Breadcrumb from '@/components/Breadcrumb.vue'
+
 export default {
+  name: 'Products',
+  components: {
+    Breadcrumb
+  },
   data() {
     return {
       isPreviewOpen: false,
@@ -396,6 +408,29 @@ export default {
   font-size: 3rem;
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.product-cta {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-color);
+}
+
+.product-cta .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.product-cta .btn:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
 /* Responsive adjustments */

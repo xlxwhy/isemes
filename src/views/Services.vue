@@ -1,40 +1,93 @@
 <template>
-  <div class="services">
-    <section class="services-hero">
+  <main class="services">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "针织织厂智能管理系统支持哪些部署方式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "系统支持本地服务器部署和云端部署两种方式。本地部署适合对数据安全有严格要求的企业，云端部署则更加灵活便捷，可根据企业规模和需求选择。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "AI智能质检的识别精度如何？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "我们的AI智能质检系统采用先进的AI算法，适应所有国产及进口品牌的单面机型，识别精度高达98%以上，漏检率低至2%以下，可有效降低废布损失80%以上。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "系统是否支持定制化开发？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "是的，我们提供全面的功能模块定制开发服务，包括特定的报表格式、数据采集方式、工资计算规则等，可根据企业需求快速定制。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "工资统计系统支持哪些计算方式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "系统支持多种工资计算方式，可根据机台采集的数据自动计算工人工资，生成详细的工资报表，包括生产产量、工时、工资等信息。"
+          }
+        }
+      ]
+    }
+    </script>
+    <Breadcrumb :breadcrumbs="[
+      { text: '服务支持' }
+    ]" />
+    <header class="services-hero">
       <div class="container">
         <h1>我们的服务</h1>
         <p class="hero-subtitle">为针织织厂提供全方位的智能化管理服务</p>
       </div>
-    </section>
+    </header>
 
-    <section class="services-list">
+    <section class="services-list" aria-labelledby="services-heading">
       <div class="container">
+        <h2 id="services-heading" class="sr-only">服务列表</h2>
         <div class="services-grid">
-          <div class="service-card" v-for="service in services" :key="service.id">
+          <article class="service-card" v-for="service in services" :key="service.id">
             <div class="service-icon" :class="service.icon"></div>
             <h2>{{ service.name }}</h2>
             <p>{{ service.description }}</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="service-details">
+    <section class="service-details" aria-labelledby="details-heading">
       <div class="container">
-        <h2>服务详情</h2>
-        <div class="detail-item" v-for="service in services" :key="service.id">
+        <h2 id="details-heading">服务详情</h2>
+        <article class="detail-item" v-for="service in services" :key="service.id">
           <h3>{{ service.name }}</h3>
           <div class="detail-content">
             <p>{{ service.detail }}</p>
           </div>
+        </article>
+        <div class="services-cta">
+          <router-link to="/contact" class="btn btn-primary">联系我们获取服务</router-link>
         </div>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
+import Breadcrumb from '@/components/Breadcrumb.vue'
+
 export default {
+  name: 'Services',
+  components: {
+    Breadcrumb
+  },
   data() {
     return {
       services: [
@@ -348,6 +401,31 @@ export default {
   line-height: 1.8;
   color: var(--text-light);
   margin-bottom: 0;
+}
+
+.services-cta {
+  text-align: center;
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 2px solid var(--border-color);
+}
+
+.services-cta .btn {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: var(--accent-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.services-cta .btn:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
 }
 
 /* Responsive adjustments */

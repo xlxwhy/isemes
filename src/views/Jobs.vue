@@ -1,17 +1,21 @@
 <template>
-  <div class="jobs">
-    <section class="jobs-hero">
+  <main class="jobs">
+    <Breadcrumb :breadcrumbs="[
+      { text: '招聘广场' }
+    ]" />
+    <header class="jobs-hero">
       <div class="container">
         <h1>招聘广场</h1>
         <p class="hero-subtitle">连接针织织厂与优秀人才的专业招聘平台</p>
       </div>
-    </section>
+    </header>
 
-    <section class="jobs-modules">
+    <section class="jobs-modules" aria-labelledby="modules-heading">
+      <h2 id="modules-heading" class="sr-only">招聘模块</h2>
       <div class="container">
         <div class="modules-grid">
           <!-- Employer Module -->
-          <div class="module-card employer">
+          <article class="module-card employer">
             <div class="module-icon">
               <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
@@ -24,10 +28,10 @@
             <h2>老板模块</h2>
             <p>发布招聘信息，寻找合适的技术人才和管理人才，助力企业发展</p>
             <router-link to="/jobs/employers" class="btn btn-primary">进入老板平台</router-link>
-          </div>
+          </article>
 
           <!-- Employee Module -->
-          <div class="module-card employee">
+          <article class="module-card employee">
             <div class="module-icon">
               <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
@@ -37,16 +41,16 @@
             <h2>员工模块</h2>
             <p>浏览最新招聘信息，找到适合自己的职业机会，实现职业发展</p>
             <router-link to="/jobs/employees" class="btn btn-secondary">进入员工平台</router-link>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="jobs-features">
+    <section class="jobs-features" aria-labelledby="features-heading">
       <div class="container">
-        <h2>平台优势</h2>
+        <h2 id="features-heading">平台优势</h2>
         <div class="features-grid">
-          <div class="feature-item">
+          <article class="feature-item">
             <div class="feature-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -55,8 +59,8 @@
             </div>
             <h3>精准匹配</h3>
             <p>基于针织行业特性，精准匹配企业需求与人才技能</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <div class="feature-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -65,8 +69,8 @@
             </div>
             <h3>高效便捷</h3>
             <p>简化招聘流程，提高招聘效率，快速找到合适人选</p>
-          </div>
-          <div class="feature-item">
+          </article>
+          <article class="feature-item">
             <div class="feature-icon">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="12" cy="12" r="10"></circle>
@@ -75,16 +79,21 @@
             </div>
             <h3>安全可靠</h3>
             <p>严格的企业和人才认证机制，确保招聘信息真实可靠</p>
-          </div>
+          </article>
         </div>
       </div>
     </section>
-  </div>
+  </main>
 </template>
 
 <script>
+import Breadcrumb from '@/components/Breadcrumb.vue'
+
 export default {
-  name: 'Jobs'
+  name: 'Jobs',
+  components: {
+    Breadcrumb
+  }
 }
 </script>
 
